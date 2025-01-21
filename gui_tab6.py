@@ -248,7 +248,7 @@ def display_chart(self, event, global_vars):
         maxy = max(df['ETR'].max(), df['ETR_ref'].max())         
         df = df.reset_index()
         fig, ax = plt.subplots(figsize=(8, 6))
-        ax=df.plot(kind="line", x='index', y=['ETR', 'ETR_ref'], color=["r", "b"], label=["ETR "+str(start_year), "ETR Under Reform "+str(start_year)]) 
+        ax=df.plot(kind="line", x='index', y=['ETR', 'ETR_ref'], color=["b", "r"], label=["ETR "+str(start_year), "ETR Under Reform "+str(start_year)]) 
         #col = ['r', 'b', 'y', 'c', 'm', 'k', 'g', 'r', 'b', 'y']
         #ax.set_xlabel('Percentile')
         ax.set_xticks(np.arange(0, 101, 10))
