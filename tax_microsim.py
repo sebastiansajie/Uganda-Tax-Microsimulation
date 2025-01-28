@@ -500,7 +500,7 @@ class Application(tk.Frame):
     
  
 def main():
-    ctypes.windll.shcore.SetProcessDpiAwareness(1)
+    #ctypes.windll.shcore.SetProcessDpiAwareness(1)
     root = tk.Tk()
     root.geometry('1000x600')
     root.title("Microsimulation Model")
