@@ -109,6 +109,9 @@ vars['DECILE_ROW_NAMES'] = DECILE_ROW_NAMES
 vars['STANDARD_ROW_NAMES'] = STANDARD_ROW_NAMES
 vars['STANDARD_INCOME_BINS'] = STANDARD_INCOME_BINS
 vars['income_measure'] = income_measure
+vars['verbose'] = 0
+vars['data_start_year'] = 2018
+
 
 with open('global_vars.json', 'w') as f:
     json.dump(vars, f)
