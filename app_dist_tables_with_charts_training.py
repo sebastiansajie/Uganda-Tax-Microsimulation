@@ -12,39 +12,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from babel.numbers import format_currency
 
-def remove_decimal(S):
-    S = str(S)
-    S = S[:-3]
-    return S
-
-def ind_currency(curr):
-    curr_str = format_currency(curr, 'INR', locale='en_IN').replace(u'\xa0', u' ')
-    return(remove_decimal(curr_str))
-
-def convert_df(df, cols):
-    # breakup the dataframe into cols and others
-    df1 = df[cols].copy(deep=True)
-    cols_other = df.columns.difference(cols)
-    df2 = df[cols_other].copy(deep=True)
-    # strip the first row and make it into a list
-    for i in range(len(df)):
-        #print('i '+ str(i))
-        row = df1.loc[i].values.tolist()
-        #print(row)
-        # take the list and build a new list element by element
-        row1=[]
-        for j in range(len(row)):
-            #row1.append(format_it(str(row[i])))
-            #row1.append(format_it(row[i]))
-            #value_str = format_currency(row[j], 'INR', locale='en_IN').replace(u'\xa0', u' ')
-            value_str = ind_currency(row[j])
-            row1.append(value_str)
-        # replace the row with the changed list
-        #df1.loc[i] =  row1
-        # reassemble the dataframe
-    df = pd.concat([df2, df1], axis=1)     
-    return(df)
-    
     
 data_filename = "pit_data_training.csv"
 weights_filename = "pit_weights_training.csv"
@@ -137,6 +104,15 @@ vars['pit_elasticity_filename'] = "elasticity_pit_training.json"
 vars['pit_functions_filename'] = "functions_pit_training.py"
 vars['pit_function_names_filename'] = "function_names_pit_training.json"
 vars['pit_distribution_json_filename'] = 'pit_distribution_training.json'
+
+vars['vat_data_filename'] = "gst.csv"
+vars['vat_weights_filename'] = "gst_weights.csv"
+vars['vat_records_variables_filename'] = "gstrecords_variables.json"  
+
+vars['cit_data_filename'] = "cit_cross.csv"
+vars['cit_weights_filename'] = "cit_cross_wgts1.csv"
+vars['cit_records_variables_filename'] = "corprecords_variables.json"
+
 vars['gdp_filename'] = 'gdp_nominal_training.csv'
 vars["start_year"] = start_year
 vars["end_year"] = end_year
