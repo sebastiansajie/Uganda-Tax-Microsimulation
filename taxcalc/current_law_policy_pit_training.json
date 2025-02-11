@@ -45,7 +45,7 @@
         "boolean_value": false,
         "integer_value": false,
         "value": [
-           1080000
+           0.0
         ],
         "range": {
             "min": 0,
@@ -100,7 +100,7 @@
         "boolean_value": false,
         "integer_value": false,
         "value": [
-           1e+99
+           1080000
         ],
         "range": {
             "min": "_tbrk1",
@@ -128,7 +128,7 @@
         "boolean_value": false,
         "integer_value": false,
         "value": [
-            0.10
+            0.18
         ],
         "range": {
             "min": 0,
@@ -157,7 +157,7 @@
         "boolean_value": false,
         "integer_value": false,
         "value": [
-           2e+99
+           1e+99
         ],
         "range": {
             "min": "_tbrk2",
@@ -185,7 +185,7 @@
         "boolean_value": false,
         "integer_value": false,
         "value": [
-            0.10
+            0.18
         ],
         "range": {
             "min": 0,
@@ -197,6 +197,34 @@
         
     },
     "_tbrk4": {
+        "long_name": "PIT tax bracket 2 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 1 is taxed at tax rate 2.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                2e+99
+        ],
+        "range": {
+            "min": 1e+99,
+            "max": 9e+99
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_tbrk5": {
         "long_name": "PIT tax bracket 2 (upper threshold)",
         "description": "Income below this threshold and above tax bracket 1 is taxed at tax rate 2.",
         "itr_ref": "R code",

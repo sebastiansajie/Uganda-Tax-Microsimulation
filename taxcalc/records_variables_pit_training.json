@@ -59,9 +59,30 @@
     
   },
   "calc": {
+    "capital_income": {
+      "type": "float",
+      "desc": "Capital Income = dividend + interest income",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
     "total_gross_income": {
       "type": "float",
       "desc": "Gross Total Income (GTI) (gross_i_w + gross_i_l + gross_i_c)", 
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "pitax_c": {
+      "type": "float",
+      "desc": "PIT for Capital Income", 
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "pitax_w": {
+      "type": "float",
+      "desc": "PIT for Wage Income",
       "form": {
         "2018": "pit_training"
       }
