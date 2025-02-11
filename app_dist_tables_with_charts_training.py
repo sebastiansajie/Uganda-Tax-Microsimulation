@@ -10,82 +10,6 @@ import pandas as pd
 #from taxcalc import *
 import numpy as np
 import matplotlib.pyplot as plt
-from babel.numbers import format_currency
-
-    
-data_filename = "pit_data_training.csv"
-weights_filename = "pit_weights_training.csv"
-records_variables_filename = "records_variables_pit_training.json"
-cit_data_filename = "cit_cross.csv"
-cit_weights_filename = "cit_cross_wgts1.csv"
-corprecords_variables_filename = "corprecords_variables.json"
-gst_data_filename = "gst.csv"
-gst_weights_filename = "gst_weights.csv"
-gstrecords_variables_filename = "gstrecords_variables.json"         
-policy_filename = "current_law_policy_pit_training.json"
-growfactors_filename = "growfactors_pit_training.csv"           
-benchmark_filename = "tax_incentives_benchmark.json"
-functions_filename = "functions_pit_training.py"
-function_names = "function_names_pit_training.json"
-start_year = 2022
-end_year=2027
-SALARY_VARIABLE = "gross_i_w"
-elasticity_filename = "elasticity_pit_training.json"
-DIST_VARIABLES = ['weight', 'total_gross_income', 'pitax']
-DIST_TABLE_COLUMNS = DIST_VARIABLES
-DIST_TABLE_LABELS = ['Returns',
-                     'Gross Total Income',
-                     'PITax']
-DECILE_ROW_NAMES = ['0-10n', '0-10z', '0-10p',
-                    '10-20', '20-30', '30-40', '40-50',
-                    '50-60', '60-70', '70-80', '80-90', '90-100',
-                    'ALL',
-                    '90-95', '95-99', 'Top 1%']
-
-STANDARD_ROW_NAMES = [ "<0", "=0", "0-0.5 m", "0.5-1m", "1-1.5m", "1.5-2m",
-                      "2-3m", "3-4m", "4-5m", "5-10m", ">10m", "ALL"]
-
-STANDARD_INCOME_BINS = [-9e99, -1e-9, 1e-9, 5e5, 10e5, 15e5, 20e5, 30e5,
-                        40e5, 50e5, 100e5, 9e99]
-  
-income_measure = "total_gross_income"
-
-"""
-data_filename = "pit.csv"
-weights_filename = "pit_weights.csv"
-records_variables_filename = "records_variables.json"
-cit_data_filename = "cit_cross.csv"
-cit_weights_filename = "cit_cross_wgts1.csv"
-corprecords_variables_filename = "corprecords_variables.json"
-gst_data_filename = "gst.csv"
-gst_weights_filename = "gst_weights.csv"
-gstrecords_variables_filename = "gstrecords_variables.json"         
-policy_filename = "current_law_policy_cmie11.json"
-growfactors_filename = "growfactors1.csv"           
-benchmark_filename = "tax_incentives_benchmark.json"
-functions_filename = "functions1.py"
-function_names = "function_names.json"
-start_year = 2017
-end_year=2023
-SALARY_VARIABLE = "SALARY"
-elasticity_filename = "elasticity.json"
-DIST_VARIABLES = ['weight', 'GTI', 'pitax']
-DIST_TABLE_COLUMNS = DIST_VARIABLES
-DIST_TABLE_LABELS = ['Returns',
-                     'Gross Total Income',
-                     'PITax']
-DECILE_ROW_NAMES = ['0-10n', '0-10z', '0-10p',
-                    '10-20', '20-30', '30-40', '40-50',
-                    '50-60', '60-70', '70-80', '80-90', '90-100',
-                    'ALL',
-                    '90-95', '95-99', 'Top 1%']
-STANDARD_ROW_NAMES = ['<0', '=0', '0-1L', '1-10L', '10-15L',
-                      '15-20L', '20-30L', '30-40L', '40-50L',
-                      '50-100L', '>100L', 'ALL']
-STANDARD_INCOME_BINS = [-9e99, -1e-9, 1e-9, 5e5, 10e5, 15e5, 20e5, 30e5,
-                        40e5, 50e5, 100e5, 9e99]    
-income_measure = "GTI"
-"""
 
 vars = {}
 
@@ -114,17 +38,25 @@ vars['cit_weights_filename'] = "cit_cross_wgts1.csv"
 vars['cit_records_variables_filename'] = "corprecords_variables.json"
 
 vars['gdp_filename'] = 'gdp_nominal_training.csv'
-vars["start_year"] = start_year
-vars["end_year"] = end_year
-vars["SALARY_VARIABLE"] = SALARY_VARIABLE
-vars['elasticity_filename'] = elasticity_filename
-vars['DIST_VARIABLES'] = DIST_VARIABLES
-vars['DIST_TABLE_COLUMNS'] = DIST_TABLE_COLUMNS        
-vars['DIST_TABLE_LABELS'] = DIST_TABLE_LABELS
-vars['DECILE_ROW_NAMES'] = DECILE_ROW_NAMES
-vars['STANDARD_ROW_NAMES'] = STANDARD_ROW_NAMES
-vars['STANDARD_INCOME_BINS'] = STANDARD_INCOME_BINS
-vars['income_measure'] = income_measure
+vars["start_year"] = 2022
+vars["end_year"] = 2027
+vars["SALARY_VARIABLE"] = "gross_i_w"
+vars['elasticity_filename'] = "elasticity_pit_training.json"
+vars['DIST_VARIABLES'] = ['weight', 'total_gross_income', 'pitax']
+vars['DIST_TABLE_COLUMNS'] = ['weight', 'total_gross_income', 'pitax']        
+vars['DIST_TABLE_LABELS'] = ['Returns',
+                     'Gross Total Income',
+                     'PITax']
+vars['DECILE_ROW_NAMES'] = ['0-10n', '0-10z', '0-10p',
+                    '10-20', '20-30', '30-40', '40-50',
+                    '50-60', '60-70', '70-80', '80-90', '90-100',
+                    'ALL',
+                    '90-95', '95-99', 'Top 1%']
+vars['STANDARD_ROW_NAMES'] = [ "<0", "=0", "0-0.5 m", "0.5-1m", "1-1.5m", "1.5-2m",
+                      "2-3m", "3-4m", "4-5m", "5-10m", ">10m", "ALL"]
+vars['STANDARD_INCOME_BINS'] = [-9e99, -1e-9, 1e-9, 5e5, 10e5, 15e5, 20e5, 30e5,
+                        40e5, 50e5, 100e5, 9e99]
+vars['income_measure'] = "total_gross_income"
 vars['show_error_log'] = 0
 vars['verbose'] = 0
 vars['data_start_year'] = 2018

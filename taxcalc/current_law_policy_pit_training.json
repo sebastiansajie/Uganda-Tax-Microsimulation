@@ -111,7 +111,7 @@
         "out_of_range_action": "stop"
         
     },
-    "_rate3": {  
+    "_rate3": {
         "long_name": "PIT tax rate 1", 
         "description": "The lowest tax rate, applied to the portion of taxable income below tax bracket 1.",
         "itr_ref": "R code",
