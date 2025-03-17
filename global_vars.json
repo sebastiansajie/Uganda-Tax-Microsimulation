@@ -2,16 +2,16 @@
   "pit": 1,
   "cit": 0,
   "vat": 0,
-  "DEFAULTS_FILENAME": "current_law_policy_pit_training.json",
-  "GROWFACTORS_FILENAME": "growfactors_pit_training.csv",
-  "pit_data_filename": "pit_data_training.csv",
-  "pit_weights_filename": "pit_weights_training.csv",
-  "pit_records_variables_filename": "records_variables_pit_training.json",
+  "DEFAULTS_FILENAME": "current_law_policy_pit_Mex.json",
+  "GROWFACTORS_FILENAME": "growfactors_pit_Mex.csv",
+  "pit_data_filename": "data_pit_Mex.csv",
+  "pit_weights_filename": "pit_weights_Mex.csv",
+  "pit_records_variables_filename": "records_variables_pit_Mex.json",
   "pit_benchmark_filename": "tax_incentives_benchmark_pit_training.json",
-  "pit_elasticity_filename": "elasticity_pit_training.json",
-  "pit_functions_filename": "functions_pit_training.py",
-  "pit_function_names_filename": "function_names_pit_training.json",
-  "pit_distribution_json_filename": "pit_distribution_training.json",
+  "pit_elasticity_filename": "pit_elasticity_selection.json",
+  "pit_functions_filename": "functions_pit_Mex.py",
+  "pit_function_names_filename": "function_names_pit_Mex.json",
+  "pit_distribution_json_filename": "pit_distribution_Mex.json",
   "vat_data_filename": "gst.csv",
   "vat_weights_filename": "gst_weights.csv",
   "vat_records_variables_filename": "gstrecords_variables.json",
@@ -21,21 +21,21 @@
   "gdp_filename": "gdp_nominal_training.csv",
   "start_year": 2022,
   "end_year": 2027,
-  "SALARY_VARIABLE": "gross_i_w",
-  "elasticity_filename": "elasticity_pit_training.json",
+  "SALARY_VARIABLE": "income_wages_t",
+  "elasticity_filename": "pit_elasticity_selection.json",
   "DIST_VARIABLES": [
     "weight",
-    "total_gross_income",
+    "income_wages_t",
     "pitax"
   ],
   "DIST_TABLE_COLUMNS": [
     "weight",
-    "total_gross_income",
+    "income_wages_t",
     "pitax"
   ],
   "DIST_TABLE_LABELS": [
     "Returns",
-    "Gross Total Income",
+    "Gross Wages",
     "PITax"
   ],
   "DECILE_ROW_NAMES": [
@@ -84,8 +84,8 @@
     10000000.0,
     9e+99
   ],
-  "income_measure": "total_gross_income",
+  "income_measure": "income_wages_t",
   "show_error_log": 0,
   "verbose": 0,
-  "data_start_year": 2018
+  "data_start_year": 2022
 }
