@@ -1,0 +1,2157 @@
+{
+    "_rate1": {  
+        "long_name": "PIT tax rate 1", 
+        "description": "The lowest tax rate, applied to the portion of taxable income below tax bracket 2.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",    
+        "row_label": [  
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.0192
+        ],
+        "range": {
+            "min": 0,
+            "max": 1 
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+       
+    },
+    "_tbrk1": {
+        "long_name": "PIT tax bracket 1 (upper threshold)",
+        "description": "Taxable income below this threshold is taxed at tax rate 1.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+           8952.49
+        ],
+        "range": {
+            "min": 0.01,
+            "max": "_tbrk2"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "for _tbrk2",
+        "out_of_range_action": "stop"
+    },
+    "_rate2": {  
+        "long_name": "PIT tax rate 2", 
+        "description": "The second lowest tax rate, applied to the portion of taxable income below tax bracket 3 and above tax bracket 2.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",    
+        "row_label": [  
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.064
+        ],
+        "range": {
+            "min": 0,
+            "max": 1 
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_tbrk2": {
+        "long_name": "PIT tax bracket 1 (upper threshold)",
+        "description": "Taxable income below this threshold is taxed at tax rate 1.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+           75984.55
+        ],
+        "range": {
+            "min": "_tbrk1",
+            "max": "_tbrk3"
+        },
+        "out_of_range_minmsg": "for _tbrk1",
+        "out_of_range_maxmsg": "for _tbrk3",
+        "out_of_range_action": "stop"
+        
+    },
+    "_rate3": {
+        "long_name": "PIT tax rate 3", 
+        "description": "The third tax rate, applied to the portion of taxable income below tax bracket 4.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",    
+        "row_label": [  
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.1088
+        ],
+        "range": {
+            "min": 0,
+            "max": 1 
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+        
+    },
+    "_tbrk3": {
+        "long_name": "PIT tax bracket 3 (upper threshold)",
+        "description": "Taxable income below this threshold and above bracket 2 is taxed at tax rate 3.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+           133536.07
+        ],
+        "range": {
+            "min": "_tbrk2",
+            "max": "_tbrk4"
+        },
+        "out_of_range_minmsg": "for _tbrk2",
+        "out_of_range_maxmsg": "for _tbrk4",
+        "out_of_range_action": "stop"
+        
+    },
+    "_rate4": {
+        "long_name": "PIT tax rate 4",
+        "description": "The fourth lowest tax rate, applied to the portion of taxable income below tax bracket 5 and above tax bracket 3.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.16
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+        
+    },
+    "_tbrk4": {
+        "long_name": "PIT tax bracket 4 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 3 is taxed at tax rate 4.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                155229.80
+        ],
+        "range": {
+            "min": "_tbrk3",
+            "max": "_tbrk5"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_rate5": {
+        "long_name": "PIT tax rate 5",
+        "description": "The fifth lowest tax rate, applied to the portion of taxable income below bracket 5 and above tax bracket 4.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.1792
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+        
+    },
+    "_tbrk5": {
+        "long_name": "PIT tax bracket 5 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 4 is taxed at tax rate 5.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                185852.57
+        ],
+        "range": {
+            "min": "_tbrk4",
+            "max": "_tbrk6"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_rate6": {
+        "long_name": "PIT tax rate 6",
+        "description": "The sixth tax rate, applied to the portion of taxable income below tax bracket 7 and above tax bracket 5.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.2136
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+        
+    },
+    "_tbrk6": {
+        "long_name": "PIT tax bracket 6 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 5 is taxed at tax rate 6.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                374837.88
+        ],
+        "range": {
+            "min": "_tbrk5",
+            "max": "_tbrk7"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_rate7": {
+        "long_name": "PIT tax rate 7",
+        "description": "The seventh tax rate, applied to the portion of taxable income below tax bracket 8 and above tax bracket 6.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.2352
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    
+    },
+    "_tbrk7": {
+        "long_name": "PIT tax bracket 7 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 6 is taxed at tax rate 7.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                590795.99
+        ],
+        "range": {
+            "min": "_tbrk6",
+            "max": "_tbrk8"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_rate8": {
+        "long_name": "PIT tax rate 8",
+        "description": "The eighth tax rate, applied to the portion of taxable income below tax bracket 9 and above tax bracket 7.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.3
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+        
+    },
+    "_tbrk8": {
+        "long_name": "PIT tax bracket 8 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 7 is taxed at tax rate 8.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                1127926.84
+        ],
+        "range": {
+            "min": "_tbrk7",
+            "max": "_tbrk9"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_rate9": {
+        "long_name": "PIT tax rate 9",
+        "description": "The third highest tax rate, applied to the portion of taxable income below tax bracket 10 and above tax bracket 8.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.32
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+        
+    },
+    "_tbrk9": {
+        "long_name": "PIT tax bracket 9 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 8 is taxed at tax rate 9.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                1503902.46
+        ],
+        "range": {
+            "min": "_tbrk8",
+            "max": "_tbrk10"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_rate10": {
+        "long_name": "PIT tax rate 10",
+        "description": "The second highest tax rate, applied to the portion of taxable income below tax bracket 11 and above tax bracket 9.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.34
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+        
+    },
+    "_tbrk10": {
+        "long_name": "PIT tax bracket 10 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 9 is taxed at tax rate 10.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                4511707.37
+        ],
+        "range": {
+            "min": "_tbrk9",
+            "max": "_tbrk11"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_rate11": {
+        "long_name": "PIT tax rate 11",
+        "description": "The highest tax rate, applied to the portion of taxable income above tax bracket 11.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.35
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },
+    "_tbrk11": {
+        "long_name": "PIT tax bracket 11 (lower threshold)",
+        "description": "Income above tax bracket 10 is taxed at tax rate 11.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                4511707.38
+        ],
+        "range": {
+            "min": "_tbrk10",
+            "max": 9e+99
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_resico_rate1": {
+        "long_name": "Tax rate 1 for the simplified regime for incomes from business in PIT",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.01
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_resico_tbrk1": {
+        "long_name": "Resico first bracket (upper threshold)",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                25000
+        ],
+        "range": {
+            "min": 0,
+            "max": 25000
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_resico_rate2": {
+        "long_name": "Tax rate 2 for the simplified regime for incomes from business in PIT",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.011
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_resico_tbrk2": {
+        "long_name": "Resico second bracket (upper threshold)",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                50000
+        ],
+        "range": {
+            "min": "_resico_tbrk1",
+            "max": 50000
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    }, 
+    "_resico_rate3": {
+        "long_name": "Tax rate 3 for the simplified regime for incomes from business in PIT",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.015
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_resico_tbrk3": {
+        "long_name": "Resico third bracket (upper threshold)",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                83333.33
+        ],
+        "range": {
+            "min": "_resico_tbrk2",
+            "max": 83333.33
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },    
+    "_resico_rate4": {
+        "long_name": "Tax rate 4 in the simplified regime for incomes from business in PIT",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.02
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_resico_tbrk4": {
+        "long_name": "Resico forth bracket (upper threshold)",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                208333.33 
+        ],
+        "range": {
+            "min": "_resico_tbrk3",
+            "max": 208333.33
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_resico_rate5": {
+        "long_name": "Tax rate 5 in the simplified regime for incomes from business in PIT",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.025
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_resico_tbrk5": {
+        "long_name": "Resico fifth bracket (upper threshold)",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                3500000 
+        ],
+        "range": {
+            "min": "_resico_tbrk4",
+            "max": 3500000
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },     
+    "_additional_dividend_rate": {
+        "long_name": "Additional tax rate for dividends",
+        "description": "Dividend incomes are cumulated to the rest of incomes and taxed at the corresponding rate. An additional 10% is applied to the amount received from dividends",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.1
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },
+    "_capitalgains_bonds_rate": {
+        "long_name": "Capital Gain Tax rate",
+        "description": "An specific tax rate is applicable to capital gains from the sale of shares in the stock exchange",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.1
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },    
+    "_gambling_rate": {
+        "long_name": "Tax rate on incomes from gambling",
+        "description": "Incomes from gambling are taxed at 1% for those states where the state taxes set rates below 6%, else is 21%",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.01
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },   
+    "_temp_gambling_rate": {  
+        "long_name": "PIT tax rate for gambling", 
+        "description": "Incomes from gambling are taxed at 1% for those states where the state taxes set rates below 6%, else is 21%",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",    
+        "row_label": [  
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.01
+        ],
+        "range": {
+            "min": 0,
+            "max": 1 
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+       
+    },    
+    "_rate1_curr_law": {  
+        "long_name": "PIT tax rate 1", 
+        "description": "The lowest tax rate, applied to the portion of taxable income below tax bracket 1.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",    
+        "row_label": [  
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.0192
+        ],
+        "range": {
+            "min": 0,
+            "max": 1 
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"     
+    },
+    "_tbrk1_curr_law": {
+        "long_name": "PIT tax bracket 1 (upper threshold)",
+        "description": "Taxable income below this threshold is taxed at tax rate 1.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+           8952.49
+        ],
+        "range": {
+            "min": 0.01,
+            "max": "_tbrk2"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "for _tbrk2",
+        "out_of_range_action": "stop"     
+    },
+    "_rate2_curr_law": {  
+        "long_name": "PIT tax rate 2", 
+        "description": "The second lowest tax rate, applied to the portion of taxable income below tax bracket 3.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",    
+        "row_label": [  
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.064
+        ],
+        "range": {
+            "min": 0,
+            "max": 1 
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"      
+    },
+    "_tbrk2_curr_law": {
+        "long_name": "PIT tax bracket 1 (upper threshold)",
+        "description": "Taxable income below this threshold is taxed at tax rate 1.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+           75984.55
+        ],
+        "range": {
+            "min": "_tbrk1",
+            "max": "_tbrk3"
+        },
+        "out_of_range_minmsg": "for _tbrk1",
+        "out_of_range_maxmsg": "for _tbrk3",
+        "out_of_range_action": "stop"   
+    },
+    "_rate3_curr_law": {  
+        "long_name": "PIT tax rate 3", 
+        "description": "The third lowest tax rate, applied to the portion of taxable income below tax bracket 4.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",    
+        "row_label": [  
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.1088
+        ],
+        "range": {
+            "min": 0,
+            "max": 1 
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"    
+    },
+    "_tbrk3_curr_law": {
+        "long_name": "PIT tax bracket 3 (upper threshold)",
+        "description": "Taxable income below this threshold is taxed at tax rate 3.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+           133536.07
+        ],
+        "range": {
+            "min": "_tbrk2",
+            "max": "_tbrk4"
+        },
+        "out_of_range_minmsg": "for _tbrk2",
+        "out_of_range_maxmsg": "for _tbrk4",
+        "out_of_range_action": "stop"     
+    },
+    "_rate4_curr_law": {
+        "long_name": "PIT tax rate 4",
+        "description": "The second lowest tax rate, applied to the portion of taxable income below tax bracket 2 and above tax bracket 1.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.16
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_tbrk4_curr_law": {
+        "long_name": "PIT tax bracket 4 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 1 is taxed at tax rate 2.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                155229.8
+        ],
+        "range": {
+            "min": "_tbrk3",
+            "max": "_tbrk5"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_rate5_curr_law": {
+        "long_name": "PIT tax rate 5",
+        "description": "The fifth tax rate, applied to the portion of taxable income below tax bracket 6 and above tax bracket 4.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.1792
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_tbrk5_curr_law": {
+        "long_name": "PIT tax bracket 5 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 4 is taxed at tax rate 5.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                185852.57
+        ],
+        "range": {
+            "min": "_tbrk4",
+            "max": "_tbrk6"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_rate6_curr_law": {
+        "long_name": "PIT tax rate 6",
+        "description": "The sixth tax rate, applied to the portion of taxable income below tax bracket 7 and above tax bracket 5.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.2136
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_tbrk6_curr_law": {
+        "long_name": "PIT tax bracket 6 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 5 is taxed at tax rate 6.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                374837.88
+        ],
+        "range": {
+            "min": "_tbrk5",
+            "max": "_tbrk7"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_rate7_curr_law": {
+        "long_name": "PIT tax rate 7",
+        "description": "The seventh tax rate, applied to the portion of taxable income below tax bracket 8 and above tax bracket 6.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.2352
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_tbrk7_curr_law": {
+        "long_name": "PIT tax bracket 7 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 1 is taxed at tax rate 2.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                590795.99
+        ],
+        "range": {
+            "min": "_tbrk6",
+            "max": "_tbrk8"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_rate8_curr_law": {
+        "long_name": "PIT tax rate 8",
+        "description": "The eighth tax rate, applied to the portion of taxable income below tax bracket 9 and above tax bracket 7.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.3
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_tbrk8_curr_law": {
+        "long_name": "PIT tax bracket 8 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 7 is taxed at tax rate 8.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                1127926.84
+        ],
+        "range": {
+            "min": "_tbrk7",
+            "max": "_tbrk9"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_rate9_curr_law": {
+        "long_name": "PIT tax rate 9",
+        "description": "The third highest tax rate, applied to the portion of taxable income below tax bracket 10 and above tax bracket 8.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.32
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_tbrk9_curr_law": {
+        "long_name": "PIT tax bracket 9 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 8 is taxed at tax rate 9.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                1503902.46
+        ],
+        "range": {
+            "min": "_tbrk8",
+            "max": "_tbrk10"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_rate10_curr_law": {
+        "long_name": "PIT tax rate 10",
+        "description": "The second highest tax rate, applied to the portion of taxable income below tax bracket 11 and above tax bracket 9.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.34
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_tbrk10_curr_law": {
+        "long_name": "PIT tax bracket 10 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 9 is taxed at tax rate 10.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                4511707.37
+        ],
+        "range": {
+            "min": "_tbrk9",
+            "max": "_tbrk11"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_rate11_curr_law": {
+        "long_name": "PIT tax rate 11",
+        "description": "The highest tax rate, applied to the portion of taxable income above tax bracket 10.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.35
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_tbrk11_curr_law": {
+        "long_name": "PIT tax bracket 11 (upper threshold)",
+        "description": "Income above bracket 10 is taxed at tax rate 11.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                9e+99
+        ],
+        "range": {
+            "min": "_tbrk10",
+            "max": 9e+99
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_resico_rate1_curr_law": {
+        "long_name": "Tax rate 1 for the simplified regime for incomes from business in PIT",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.01
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_resico_tbrk1_curr_law": {
+        "long_name": "Resico first bracket (upper threshold)",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                25000
+        ],
+        "range": {
+            "min": 0,
+            "max": 25000
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_resico_rate2_curr_law": {
+        "long_name": "Tax rate 2 for the simplified regime for incomes from business in PIT",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.011
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_resico_tbrk2_curr_law": {
+        "long_name": "Resico second bracket (upper threshold)",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                50000
+        ],
+        "range": {
+            "min": "_resico_tbrk1",
+            "max": 50000
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    }, 
+    "_resico_rate3_curr_law": {
+        "long_name": "Tax rate 3 for the simplified regime for incomes from business in PIT",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.015
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_resico_tbrk3_curr_law": {
+        "long_name": "Resico third bracket (upper threshold)",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                83333.33 
+        ],
+        "range": {
+            "min": "_resico_tbrk2",
+            "max": 83333.33
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },    
+    "_resico_rate4_curr_law": {
+        "long_name": "Tax rate 4 in the simplified regime for incomes from business in PIT",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.02
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_resico_tbrk4_curr_law": {
+        "long_name": "Resico forth bracket (upper threshold)",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                208333.33 
+        ],
+        "range": {
+            "min": "_resico_tbrk3",
+            "max": 208333.33
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },
+    "_resico_rate5_curr_law": {
+        "long_name": "Tax rate 5 in the simplified regime for incomes from business in PIT",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.025
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"   
+    },
+    "_resico_tbrk5_curr_law": {
+        "long_name": "Resico fifth bracket (upper threshold)",
+        "description": "Resico set forth reduced tax rates but no deduction is allowed",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                3500000 
+        ],
+        "range": {
+            "min": "_resico_tbrk4",
+            "max": 3500000
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"                
+    },                                 
+    "_additional_dividend_rate_curr_law": {
+        "long_name": " Additional tax rate for incomes from dividends",
+        "description": "Tax collected from capital income .",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.1 
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"         
+    },
+    "_capitalgains_bonds_rate_curr_law": {
+        "long_name": "Capital Gain Tax rate",
+        "description": "An specific tax rate is applicable to capital gains from the sale of shares in the stock exchange",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.1
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    }, 
+    "_gambling_rate_curr_law": {
+        "long_name": "Capital Gain Tax rate",
+        "description": "An specific tax rate is applicable to capital gains from the sale of shares in the stock exchange",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.01
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },                   
+    "_cit_rate": {
+        "long_name": "rate at which corporates are taxed",
+        "description": "Corporate Tax rate",
+        "itr_ref": "Schedule 1 Finance Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.3
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_gst_rate": {
+        "long_name": "GST Benchmark Rate",
+        "description": "GST Benchmark Rate to calculate Policy Gap",
+        "itr_ref": "Benchmark Rate",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.16
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_elasticity_pit_taxable_income_threshold": {
+        "long_name": "Threshold for Elasticity of Taxable Income",
+        "description": "elasticity",
+        "itr_ref": "elasticity",
+        "notes": "",
+        "row_var": "Tax_year",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "bracket",
+        "col_label": [
+            "bracket1",
+            "bracket2",
+            "bracket3"
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            [
+                100000,
+                1000000,
+                9e99
+            ]
+      ],
+        "range": {
+            "min": 0,
+            "max": 9e99
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_elasticity_pit_taxable_income_value": {
+        "long_name": "Elasticity of Taxable Income",
+        "description": "elasticity",
+        "itr_ref": "elasticity",
+        "notes": "",
+        "row_var": "Tax_year",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Profit",
+        "col_label": [
+            "bracket1",
+            "bracket2",
+            "bracket3"
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            [
+                0.0,
+                0.0,
+                0.0
+                ]
+      ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_elasticity_pit_capital_income_threshold": {
+        "long_name": "Threshold for Elasticity of Capital Income",
+        "description": "elasticity",
+        "itr_ref": "elasticity",
+        "notes": "",
+        "row_var": "Tax_year",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "bracket",
+        "col_label": [
+            "bracket1",
+            "bracket2",
+            "bracket3"
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            [
+                100000,
+                1000000,
+                9e99
+            ]
+      ],
+        "range": {
+            "min": 0,
+            "max": 9e99
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_elasticity_pit_capital_income_value": {
+        "long_name": "Elasticity of Capital Income",
+        "description": "elasticity",
+        "itr_ref": "elasticity",
+        "notes": "",
+        "row_var": "Tax_year",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Profit",
+        "col_label": [
+            "bracket1",
+            "bracket2",
+            "bracket3"
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            [
+                0.0,
+                0.0,
+                0.0
+                ]
+      ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    }             
+}

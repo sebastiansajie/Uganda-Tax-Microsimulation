@@ -1,0 +1,465 @@
+{
+  "read": {
+    "id_n": {
+      "required": true,
+      "type": "int",
+      "desc": "Unique positive numeric identifier for filing unit",
+      "form": {
+        "2018": "Private Info"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "Year": {
+      "required": true,
+      "type": "int",
+      "desc": "Assessment Year",
+      "form": {
+        "2018": "private info"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "income_wages_t": {
+      "type": "float",
+      "desc": "Income from Salary, other personal income based on employment and pensions (discounting exemption limits)",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "income_donations_t": {
+      "type": "float",
+      "desc": "Income from non-exempt donations (discounting exempt amounts)",
+      "form": {
+        "2019": "Obtained from data on Salaries & codes"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "transfers_donation_nongov": {
+      "type": "float",
+      "desc": "Gross incomes from donations received from non-governmental sources",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "transfers_donation_otherHH": {
+      "type": "float",
+      "desc": "Gross incomes from donations received from other households",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "exempt_total_income": {
+      "type": "float",
+      "desc": "Gross income from exempt sources",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "income_rent_t": {
+      "type": "float",
+      "desc": "Income from Property income and property rights (rents) (discounting allowed 35% as a deduction)",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "rent_building_abroad": {
+      "type": "float",
+      "desc": "Gross Income received from renting a building abroad",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "rent_building_mx": {
+      "type": "float",
+      "desc": "Gross income received from renting a building in Mexico (gross amount)",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "income_dividends_t": {
+      "type": "float",
+      "desc": "Gross income from Dividends and other income earned by participating in the profit ",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "income_interest_t": {
+      "type": "float",
+      "desc": "Gross income from interest on loans, bonds and other securities ",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "income_other_t": {
+      "type": "float",
+      "desc": "Gross income from Other income ",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "income_capital_t": {
+      "type": "float",
+      "desc": "Gross income from capital gains",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "wage_w_pr": {
+      "type": "float",
+      "desc": "gross wages from work performed under regular pay arrangements",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "piecework_w_pr": {
+      "type": "float",
+      "desc": "Gross income from piecework or task-based compensation",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "comissions_w_pr": {
+      "type": "float",
+      "desc": "Gross income from commissions earned from sales or other performance-based compensation",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "overtime_w_pr": {
+      "type": "float",
+      "desc": "Gross income from overtime pay for work done beyond regular hours",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "rewards_w_pr": {
+      "type": "float",
+      "desc": "Gross income from Rewards or incentive payments given to employees for performance",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "bonus_w_pr": {
+      "type": "float",
+      "desc": "Gross income from Bonuses received from the employer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "vacation_w_pr": {
+      "type": "float",
+      "desc": "Gross income from Vacation pay provided to employees based on their employment contract",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "profit_sharing_w_pr": {
+      "type": "float",
+      "desc": "Gross income from Profit-sharing payments based on company earnings",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "profit_sharing_w_se": {
+      "type": "float",
+      "desc": "Gross income from Profit-sharing payments in second employment",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "christmas_bonus_w_pr": {
+      "type": "float",
+      "desc": "Gross income from Christmas bonuses received as part of year-end compensation",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "christmas_bonus_w_se": {
+      "type": "float",
+      "desc": "Gross income from Christmas bonuses in second employment",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "wage_bu_t": {
+      "type": "float",
+      "desc": "Gross income from Wages from business units or external contract arrangements",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "layoff_w_t": {
+      "type": "float",
+      "desc": "Gross income from Layoff compensation or unemployment benefits attributable to the fiscal year",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "transfers_pension_mx": {
+      "type": "float",
+      "desc": "Gross income from pension plans within Mexico",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "transfers_pension_abroad": {
+      "type": "float",
+      "desc": "Gross income from pension plans abroad",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "other_other_lastmonth": {
+      "type": "float",
+      "desc": "Gross income from other work-related sources or payments received in the last month",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "other_other_prev5": {
+      "type": "float",
+      "desc": "Gross income from other work-related sources or payments received in the previous five months",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "wage_w_se": {
+      "type": "float",
+      "desc": "Gross income from Wages from second employment",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "lotteries": {
+      "type": "float",
+      "desc": "Income received from lotteries and other similar games of chance",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
+    "capital_bonds": {
+      "type": "float",
+      "desc": "Income received from sales of bonds in stock exchange",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "layoff_pending": {
+      "type": "float",
+      "desc": "Income received from sales of bonds in stock exchange",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "pending_capital_t": {
+      "type": "float",
+      "desc": "Income received from sales of bonds in stock exchange",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "business_general_t": {
+      "type": "float",
+      "desc": "Income received from business and professional activities of the individual",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "business_simp_t": {
+      "type": "float",
+      "desc": "Income received from business and professional activities of the individual subject to simplified regime (RESICO)",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },                      
+    "deductible_expenses": {
+      "type": "float",
+      "desc": "Total deductible expenses (not authorized deductions)",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    }
+    
+  },
+  "calc": {
+    "gross_wage": {
+      "type": "float",
+      "desc": "Gross wage calculated from various wage components (e.g., piecework, commissions, overtime, bonuses, etc.)",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "gross_income_ex": {
+      "type": "float",
+      "desc": "Gross income amount including exempt incomes",
+      "form": {
+        "2018": "pit_training"
+      }
+    },    
+    "gross_total_income": {
+      "type": "float",
+      "desc": "Gross Total Income (wages, interest, rent, dividends, donations, capital gains and other sources)", 
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "tax_c_income": {
+      "type": "float",
+      "desc": "Total Income for PIT purposes (cumulates wages, interest, rent, dividends, donations, capital gains and other sources)", 
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "authorized_deduction": {
+      "type": "float",
+      "desc": "Amount from deductible expenses that complies with limits for deductions",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "taxable_income": {
+      "type": "float",
+      "desc": "Taxable income (GTI - deductions)",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "pitax_w": {
+      "type": "float",
+      "desc": "PIT liability",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "highest_rate_applied": {
+      "type": "float",
+      "desc": "Marginal rate of the bracket corresponding to taxable income",
+      "form": {
+        "2018": "pit_training"
+      }
+    },                   
+    "additional_dividend_pitax": {
+      "type": "float",
+      "desc": "Additional tax on dividends",
+      "form": {
+        "2018": "pit_training"
+      }
+    }, 
+    "gambling_pitax": {
+      "type": "float",
+      "desc": "Tax on incomes from gambling",
+      "form": {
+        "2018": "pit_training"
+      }
+    },  
+    "capitalgains_pitax": {
+      "type": "float",
+      "desc": "Tax on incomes from capital gains in stock market sales of bonds",
+      "form": {
+        "2018": "pit_training"
+      }
+    },    
+    "pending_pitax": {
+      "type": "float",
+      "desc": "Tax on incomes from capital gains in stock market sales of bonds",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "business_resico_pitax": {
+      "type": "float",
+      "desc": "Tax on incomes from business and professional activities in the Simplified Regime",
+      "form": {
+        "2018": "pit_training"
+      }
+    },        
+    "business_general_pitax": {
+      "type": "float",
+      "desc": "Tax on incomes from business and professional activities",
+      "form": {
+        "2018": "pit_training"
+      }
+    },                       
+        "pitax": {
+          "type": "float",
+          "desc": "Total PIT liability (including additional tax on dividends)",
+          "form": {
+            "2018": "pit_training"
+          }
+        } 
+  }
+}
