@@ -182,7 +182,7 @@ def generate_tax_expenditures():
         for year in range(start_year, start_year+1):
             revenue_dict[tax_type][year]={}
         window_dict[tax_type] = tk.Toplevel()
-        window_dict[tax_type].geometry("800x600+600+140")            
+        window_dict[tax_type].geometry("800x600+600+140")         
         #display_table(window, header=True)
         # Adjust this for number of years selected
         header = ["header","Tax Incentive", "Current Law", "Benchmark", "Tax Expenditure"]
@@ -198,7 +198,7 @@ def generate_tax_expenditures():
     revenue_dict0 = weighted_total_tax(calc1, tax_list, 'current_law', year, revenue_dict, GDP_Nominal, attribute_var)
     np.seterr(divide='ignore', invalid='ignore')
     #pol2 = Policy()
-    reform = Calculator.read_json_param_objects(global_variables['pit_benchmark_filename'], None)    
+    reform = Calculator.read_json_param_objects(global_variables[tax_type+'_benchmark_filename'], None) 
     ref_dict = reform['policy']
     var_list = []
     tax_expenditure_var_list = []

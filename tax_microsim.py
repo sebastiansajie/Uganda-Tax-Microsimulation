@@ -415,13 +415,15 @@ class Application(tk.Frame):
         elif run_type=='dist_by_income':
             self.vars[self.tax_type+'_display_distribution_table_bydecile'] = 0
             self.vars[self.tax_type+'_display_distribution_table_byincome'] = 1
-            self.vars[self.tax_type+'_display_revenue_table'] = 0
-           
-        #elif run_type == 'rev_behavior':
-        else:
+            self.vars[self.tax_type+'_display_revenue_table'] = 0            
+        elif run_type=='revenue':
             self.vars[self.tax_type+'_display_distribution_table_bydecile'] = 0
             self.vars[self.tax_type+'_display_distribution_table'] = 0
             self.vars[self.tax_type+'_display_revenue_table'] = 1
+        else:
+            self.vars[self.tax_type+'_display_distribution_table_bydecile'] = 0
+            self.vars[self.tax_type+'_display_distribution_table'] = 0
+            self.vars[self.tax_type+'_display_revenue_table'] = 0            
             
         self.save_inputs()
 
@@ -465,8 +467,13 @@ class Application(tk.Frame):
         
         progress_bar = Progress_Bar(self.master)
         self.progressbar, self.progress_label = progress_bar.progressbar
-        from generate_policy_revenues import generate_policy_revenues       
-        self.foo_thread = Thread(target=generate_policy_revenues)        
+        if run_type=='tax_expenditure':
+            from generate_tax_expenditures import generate_tax_expenditures  
+            self.foo_thread = Thread(target=generate_tax_expenditures)
+        else: 
+            from generate_policy_revenues import generate_policy_revenues    
+            self.foo_thread = Thread(target=generate_policy_revenues)
+            
         self.foo_thread.daemon = True
         self.progressbar.start(interval=10)
         self.foo_thread.start()
@@ -477,18 +484,19 @@ class Application(tk.Frame):
         # self.pic.image = self.image         
         
     def clicked_generate_tax_expenditures(self):
-        vars = self.get_inputs_after_saving_current_vars()
-        if vars['show_error_log']:
-            self.logger.clear()
-        self.verbose = vars['verbose']
-        progress_bar = Progress_Bar(self.master)
-        self.progressbar, self.progress_label = progress_bar.progressbar
-        from generate_tax_expenditures import generate_tax_expenditures  
-        self.foo_thread = Thread(target=generate_tax_expenditures)
-        self.foo_thread.daemon = True
-        self.progressbar.start(interval=10)
-        self.foo_thread.start()
-        self.master.after(20, self.check_thread)
+        self.run_core_program('tax_expenditure')
+        # vars = self.get_inputs_after_saving_current_vars()
+        # if vars['show_error_log']:
+        #     self.logger.clear()
+        # self.verbose = vars['verbose']
+        # progress_bar = Progress_Bar(self.master)
+        # self.progressbar, self.progress_label = progress_bar.progressbar
+        # from generate_tax_expenditures import generate_tax_expenditures  
+        # self.foo_thread = Thread(target=generate_tax_expenditures)
+        # self.foo_thread.daemon = True
+        # self.progressbar.start(interval=10)
+        # self.foo_thread.start()
+        # self.master.after(20, self.check_thread)
 
     def clicked_generate_distribution(self, run_type):        
         self.run_core_program(run_type)

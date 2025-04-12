@@ -20,24 +20,16 @@
       "cross_year": "No",
       "attribute": "No"
     },
-    "income_wages_t": {
-      "type": "float",
-      "desc": "Income from Salary, other personal income based on employment and pensions (discounting exemption limits)",
+    "age": {
+      "required": true,
+      "type": "int",
+      "desc": "Taxpayer age",
       "form": {
-        "2018": "pit_training"
+        "2018": "private info"
       },
       "cross_year": "No",
       "attribute": "No"
-    },
-    "income_donations_t": {
-      "type": "float",
-      "desc": "Income from non-exempt donations (discounting exempt amounts)",
-      "form": {
-        "2019": "Obtained from data on Salaries & codes"
-      },
-      "cross_year": "No",
-      "attribute": "No"
-    },
+    },    
     "transfers_donation_nongov": {
       "type": "float",
       "desc": "Gross incomes from donations received from non-governmental sources",
@@ -65,9 +57,9 @@
       "cross_year": "No",
       "attribute": "No"
     },
-    "income_rent_t": {
+    "rent_land": {
       "type": "float",
-      "desc": "Income from Property income and property rights (rents) (discounting allowed 35% as a deduction)",
+      "desc": "Gross Income from rent of land",
       "form": {
         "2018": "pit_training"
       },
@@ -92,42 +84,24 @@
       "cross_year": "No",
       "attribute": "No"
     },
-    "income_dividends_t": {
+    "rent_intangibles": {
       "type": "float",
-      "desc": "Gross income from Dividends and other income earned by participating in the profit ",
+      "desc": "Gross Income received from renting intangible assets",
       "form": {
         "2018": "pit_training"
       },
       "cross_year": "No",
       "attribute": "No"
     },
-    "income_interest_t": {
+    "rent_other": {
       "type": "float",
-      "desc": "Gross income from interest on loans, bonds and other securities ",
+      "desc": "Gross income received from other assets renting",
       "form": {
         "2018": "pit_training"
       },
       "cross_year": "No",
       "attribute": "No"
-    },
-    "income_other_t": {
-      "type": "float",
-      "desc": "Gross income from Other income ",
-      "form": {
-        "2018": "pit_training"
-      },
-      "cross_year": "No",
-      "attribute": "No"
-    },
-    "income_capital_t": {
-      "type": "float",
-      "desc": "Gross income from capital gains",
-      "form": {
-        "2018": "pit_training"
-      },
-      "cross_year": "No",
-      "attribute": "No"
-    },
+    },    
     "wage_w_pr": {
       "type": "float",
       "desc": "gross wages from work performed under regular pay arrangements",
@@ -227,16 +201,61 @@
       "cross_year": "No",
       "attribute": "No"
     },
-    "wage_bu_t": {
+    "wage_b_pr": {
       "type": "float",
-      "desc": "Gross income from Wages from business units or external contract arrangements",
+      "desc": "Gross income from Wages from business of individuals",
       "form": {
         "2018": "pit_training"
       },
       "cross_year": "No",
       "attribute": "No"
     },
-    "layoff_w_t": {
+    "profit_b_pr": {
+      "type": "float",
+      "desc": "Gross income from profits related to business of individuals",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
+    "other_b_pr": {
+      "type": "float",
+      "desc": "Gross income from other incomes from business of individuals",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },        
+    "wage_b_se": {
+      "type": "float",
+      "desc": "Gross income from Wages from business of individuals (secondary)",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "profit_b_se": {
+      "type": "float",
+      "desc": "Gross income from profits related to business of individuals (secondary)",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
+    "other_b_se": {
+      "type": "float",
+      "desc": "Gross income from other incomes from business of individuals (secondary)",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },      
+    "transfers_compensation_layoff": {
       "type": "float",
       "desc": "Gross income from Layoff compensation or unemployment benefits attributable to the fiscal year",
       "form": {
@@ -308,42 +327,312 @@
       "cross_year": "No",
       "attribute": "No"
     },
-    "layoff_pending": {
+    "capital_realproperty": {
       "type": "float",
-      "desc": "Income received from sales of bonds in stock exchange",
+      "desc": "Income received from sales of real estate",
       "form": {
         "2018": "pit_training"
       },
       "cross_year": "No",
       "attribute": "No"
-    },
-    "pending_capital_t": {
+    },    
+    "capital_land": {
       "type": "float",
-      "desc": "Income received from sales of bonds in stock exchange",
+      "desc": "Income received from sales of land",
       "form": {
         "2018": "pit_training"
       },
       "cross_year": "No",
       "attribute": "No"
-    },
-    "business_general_t": {
+    }, 
+    "capital_jewelryorart": {
       "type": "float",
-      "desc": "Income received from business and professional activities of the individual",
+      "desc": "Income received from sales of art, jewelry",
       "form": {
         "2018": "pit_training"
       },
       "cross_year": "No",
       "attribute": "No"
-    },
-    "business_simp_t": {
+    },          
+    "capital_intangibles": {
       "type": "float",
-      "desc": "Income received from business and professional activities of the individual subject to simplified regime (RESICO)",
+      "desc": "Income received from sales of intangibles",
       "form": {
         "2018": "pit_training"
       },
       "cross_year": "No",
       "attribute": "No"
-    },                      
+    },       
+    "capital_m_and_e": {
+      "type": "float",
+      "desc": "Income received from sales of Machinery and Equipment",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
+    "capital_vehicles": {
+      "type": "float",
+      "desc": "Income received from sales of vehicles",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    }, 
+    "capital_hhitems": {
+      "type": "float",
+      "desc": "Income received from sales of household items",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },       
+    "other_financial_capital": {
+      "type": "float",
+      "desc": "Income received from other financial or capital concepts",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },             
+    "transfers_othercountries": {
+      "type": "float",
+      "desc": "Income received from remmitances or other incomes from abroad",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
+    "interest_inv": {
+      "type": "float",
+      "desc": "Income received as interest from investments",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },         
+    "interest_savings": {
+      "type": "float",
+      "desc": "Income received as interest from savings",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
+    "interest_loans": {
+      "type": "float",
+      "desc": "Income received as interest from loans",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
+    "interest_bonds": {
+      "type": "float",
+      "desc": "Income received as interest from bonds",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },        
+    "investment_withdrawal": {
+      "type": "float",
+      "desc": "Income received from withdrawal from investments, savings, savings accounts, etc. (treated as interest)",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
+    "payments_loan_otherHH": {
+      "type": "float",
+      "desc": "Income received from loans to other households",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },  
+    "life_insurance": {
+      "type": "float",
+      "desc": "Income received from life insurance (treated as interest)",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },   
+    "tot_inc": {
+      "type": "float",
+      "desc": "Gross Income (including exempted types of incomes)",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    }, 
+    "transfers_scholarship_nongov": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    }, 
+    "transfers_scholarship_gov": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },     
+    "life_insurance_headshh": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
+    "welfare_procampo": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },      
+    "welfare_elders": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },  
+    "welfare_other_social_benefits": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },  
+    "welfare_other_nonreported": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },          
+    "inheritances": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },   
+    "welfare_scholarship_PROSPERA": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },       
+    "welfare_scholarship_BJ": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },       
+    "welfare_scholarship_JEF": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },       
+    "welfare_older": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },      
+    "welfare_disabilities": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },   
+    "welfare_children_workingmothers": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },      
+    "welfare_JCF": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },   
+    "transfers_compensation_insurance": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },     
+    "transfers_compensation_workaccident": {
+      "type": "float",
+      "desc": "Income from cash transfer",
+      "form": {
+        "2018": "pit_training"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },                                                                                                         
     "deductible_expenses": {
       "type": "float",
       "desc": "Total deductible expenses (not authorized deductions)",
@@ -363,21 +652,168 @@
         "2018": "pit_training"
       }
     },
-    "gross_income_ex": {
+    "wage_inc": {
       "type": "float",
-      "desc": "Gross income amount including exempt incomes",
+      "desc": "Income from wages (it does not include incomes from other wage-related concepts",
+      "form": {
+        "2019": "Obtained from data on Salaries & codes"
+      }
+    },  
+    "overtime_bonus_w_t": {
+      "type": "float",
+      "desc": "taxable income from bonuses, overtime, rewards",
+      "form": {
+        "2018": "pit_training"
+      }
+    },        
+    "christmas_bonus_t": {
+      "type": "float",
+      "desc": "taxable income from Christmas bonus",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "vacation_t": {
+      "type": "float",
+      "desc": "taxable income from vacation compensations",
+      "form": {
+        "2018": "pit_training"
+      }
+    }, 
+    "profit_sharing_t": {
+      "type": "float",
+      "desc": "taxable income from profit sharings in fiscal year",
+      "form": {
+        "2018": "pit_training"
+      }
+    },     
+    "pensions_w_t": {
+      "type": "float",
+      "desc": "taxable income from pensions",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "wage_bu_t": {
+      "type": "float",
+      "desc": "Gross income from Wages from business units or external contract arrangements",
+      "form": {
+        "2018": "pit_training"
+      }
+    },                       
+    "income_wages_t": {
+      "type": "float",
+      "desc": "Income from Salary, other personal income based on employment and pensions (discounting exemption limits)",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "layoff_w_t": {
+      "type": "float",
+      "desc": "Gross income from Layoff compensation or unemployment benefits attributable to the fiscal year",
+      "form": {
+        "2018": "pit_training"
+      }
+    },     
+    "layoff_pending": {
+      "type": "float",
+      "desc": "Income received from sales of bonds in stock exchange",
       "form": {
         "2018": "pit_training"
       }
     },    
-    "gross_total_income": {
+    "income_rent_t": {
+      "type": "float",
+      "desc": "Taxable Income from Property income and property rights (rents) (discounting allowed 35% as a deduction)",
+      "form": {
+        "2018": "pit_training"
+      }
+    },    
+    "capital_real_estate_t": {
+      "type": "float",
+      "desc": "Taxable Income from real estate sales (discounting allowed 700,000 UDIS)",
+      "form": {
+        "2018": "pit_training"
+      }
+    },     
+    "capital_land_t": {
+      "type": "float",
+      "desc": "Taxable Income from land sales (minus allowance)",
+      "form": {
+        "2018": "pit_training"
+      }
+    }, 
+    "income_capital_t": {
+      "type": "float",
+      "desc": "Gross income from capital gains",
+      "form": {
+        "2018": "pit_training"
+      }
+    },           
+    "income_donations_t": {
+      "type": "float",
+      "desc": "Income from non-exempt donations (discounting exempt amounts)",
+      "form": {
+        "2018": "Obtained from data on Salaries & codes"
+      }
+    }, 
+    "income_dividend_t": {
+      "type": "float",
+      "desc": "Gross income from Dividends and other income earned by participating in the profit ",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "income_interest_t": {
+      "type": "float",
+      "desc": "Gross income from interest on loans, bonds and other securities ",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "income_other_t": {
+      "type": "float",
+      "desc": "Gross income from Other income ",
+      "form": {
+        "2018": "pit_training"
+      }
+    },       
+    "total_gross_income": {
       "type": "float",
       "desc": "Gross Total Income (wages, interest, rent, dividends, donations, capital gains and other sources)", 
       "form": {
         "2018": "pit_training"
       }
     },
-    "tax_c_income": {
+    "subsidy_w": {
+      "type": "float",
+      "desc": "Amount of subsidy for workers receiving up to 1.2 minimum wages", 
+      "form": {
+        "2018": "pit_training"
+      }
+    },    
+    "pending_capital_t": {
+      "type": "float",
+      "desc": "Income received from sales of bonds in stock exchange",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "business_general_t": {
+      "type": "float",
+      "desc": "Income received from business and professional activities of the individual",
+      "form": {
+        "2018": "pit_training"
+      }
+    },
+    "business_simp_t": {
+      "type": "float",
+      "desc": "Income received from business and professional activities of the individual subject to simplified regime (RESICO)",
+      "form": {
+        "2018": "pit_training"
+      }
+    },                         
+    "tax_cum_income": {
       "type": "float",
       "desc": "Total Income for PIT purposes (cumulates wages, interest, rent, dividends, donations, capital gains and other sources)", 
       "form": {
@@ -398,6 +834,13 @@
         "2018": "pit_training"
       }
     },
+    "tax_refund": {
+      "type": "float",
+      "desc": "PIT liability",
+      "form": {
+        "2018": "pit_training"
+      }
+    },    
     "pitax_w": {
       "type": "float",
       "desc": "PIT liability",

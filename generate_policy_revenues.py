@@ -573,9 +573,11 @@ def generate_policy_revenues():
             write_file(dt_tax_all12, text_output3, filename3)
             write_file(dt_tax_all34, text_output4, filename4)
             filename_etr = tax_type+'_etr'
+            filename_lorenz = tax_type+'_lorenz_curve'
             text_output_etr = dt_percentile[tax_type]['All'].to_string() + '\n\n'
             #print('dt_percentile[tax_type][All]', dt_percentile[tax_type]['All'])
-            write_file(dt_percentile[tax_type]['All'], text_output_etr, filename_etr)            
+            write_file(dt_percentile[tax_type]['All'], text_output_etr, filename_etr)   
+            write_file(dt_percentile[tax_type]['All'], text_output_etr, filename_lorenz)     
            
             if global_variables[tax_type+'_display_distribution_table_byincome']:
                 window_dist[tax_type] = tk.Toplevel()
@@ -621,6 +623,7 @@ def generate_policy_revenues():
             chart_list = chart_list + [tax_type+'_distribution_table_top1']
             chart_list = chart_list + [tax_type+'_distribution_table_income_bins']
             chart_list = chart_list + [tax_type+'_etr']
+            chart_list = chart_list + [tax_type+'_lorenz_curve']
             global_variables['kakwani_list'] = kakwani_list
             
             

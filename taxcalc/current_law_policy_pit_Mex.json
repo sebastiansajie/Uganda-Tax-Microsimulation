@@ -917,6 +917,384 @@
         "out_of_range_maxmsg": "",
         "out_of_range_action": "stop"        
     },
+    "_minimum_wage": {
+        "long_name": "minimum wage",
+        "description": "Value of the daily UMA, taken as reference for exemptions and allowances",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2022,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            62233.2
+        ],
+        "range": {
+            "min": 0,
+            "max": 1e6
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },    
+    "_UMA_value_d": {
+        "long_name": "UMA daily value",
+        "description": "Value of the daily UMA, taken as reference for exemptions and allowances",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            96.22
+        ],
+        "range": {
+            "min": 0,
+            "max": 96.22
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },
+    "_UMA_value_m": {
+        "long_name": "UMA monthly value",
+        "description": "Value of the monthly UMA, taken as reference for exemptions and allowances",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            2925.09
+        ],
+        "range": {
+            "min": 0,
+            "max": 2925.09
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },    
+    "_UMA_value_y": {
+        "long_name": "UMA annual value",
+        "description": "Value of the annual UMA, taken as reference for exemptions and allowances",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            35101.08
+        ],
+        "range": {
+            "min": 0,
+            "max": 35101.08
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },
+    "_subsidy_rate": {
+        "long_name": "UMA annual value",
+        "description": "% of the UMA given as subsidy rate",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.1182
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    }, 
+    "_allowance_wages": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance in terms of UMA (days per week) applicable to wages or salary",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },        
+    "_allowance_bonus_overtime": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance in terms of UMA (days per week) applicable to overtime, bonus, incentives, and additional payments",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            5
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },            
+    "_allowance_christmas": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance in terms of UMA (days per year) applicable to Christmas bonus",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            30
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },                
+    "_allowance_vacations_profit_sharing": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance applicable to vacations or profit sharing in terms of UMA (days per year)",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            15
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },       
+    "_allowance_pensions": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance applicable to pensions in terms of UMA (daily amount of UMAs)",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            15
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },   
+    "_allowance_realestate": {
+        "long_name": "UDIS of the allowance (for real estate)",
+        "description": "Limit of the allowance applicable to real estate sales (UDIS are Invest Units, which are daily adjusted for inflation)",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            7e5
+        ],
+        "range": {
+            "min": 0,
+            "max": 1e6
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },  
+    "_allowance_land_sales": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance applicable to land sales (3 UMAs at the annual value)",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            3
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    }, 
+    "_allowance_bonus_overtime": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance in terms of UMA (annual value) applicable to donations",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            3
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },                          
+    "_allowance_general": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance in terms of UMA (annual value) applicable to oeverall incomes",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },                                             
     "_capitalgains_bonds_rate": {
         "long_name": "Capital Gain Tax rate",
         "description": "An specific tax rate is applicable to capital gains from the sale of shares in the stock exchange",
@@ -971,34 +1349,6 @@
         "out_of_range_maxmsg": "",
         "out_of_range_action": "stop"        
     },   
-    "_temp_gambling_rate": {  
-        "long_name": "PIT tax rate for gambling", 
-        "description": "Incomes from gambling are taxed at 1% for those states where the state taxes set rates below 6%, else is 21%",
-        "itr_ref": "R code",
-        "notes": "",
-        "row_var": "AYEAR",    
-        "row_label": [  
-            "2018"
-        ],
-        "start_year": 2018,
-        "cpi_inflatable": false,
-        "cpi_inflated": false,
-        "col_var": "",
-        "col_label": "",
-        "boolean_value": false,
-        "integer_value": false,
-        "value": [
-            0.01
-        ],
-        "range": {
-            "min": 0,
-            "max": 1 
-        },
-        "out_of_range_minmsg": "",
-        "out_of_range_maxmsg": "",
-        "out_of_range_action": "stop"
-       
-    },    
     "_rate1_curr_law": {  
         "long_name": "PIT tax rate 1", 
         "description": "The lowest tax rate, applied to the portion of taxable income below tax bracket 1.",
@@ -1959,7 +2309,304 @@
         "out_of_range_minmsg": "",
         "out_of_range_maxmsg": "",
         "out_of_range_action": "stop"        
-    },                   
+    },
+    "_subsidy_rate_curr_law": {
+        "long_name": "UMA annual value",
+        "description": "% of the UMA given as subsidy rate",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.1182
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },    
+    "_allowance_wages_curr_law": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance in terms of UMA (days per week) applicable to wages or salary",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },     
+    "_allowance_bonus_overtime_curr_law": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance in terms of UMA (days per week) applicable to overtime, bonus, incentives, and additional payments",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            5
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },            
+    "_allowance_christmas_curr_law": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance in terms of UMA (days per year) applicable to Christmas bonus",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            30
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },                
+    "_allowance_vacations_profit_sharing_curr_law": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance applicable to vacations or profit sharing in terms of UMA (days per year)",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            15
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },       
+    "_allowance_pensions_curr_law": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance applicable to pensions in terms of UMA (daily amount of UMAs)",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            15
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },   
+    "_allowance_realestate_curr_law": {
+        "long_name": "UDIS of the allowance (for real estate)",
+        "description": "Limit of the allowance applicable to real estate sales (UDIS are Invest Units, which are daily adjusted for inflation)",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            7e5
+        ],
+        "range": {
+            "min": 0,
+            "max": 1e6
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },  
+    "_allowance_land_sales_curr_law": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance applicable to land sales (3 UMAs at the annual value)",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            3
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    }, 
+    "_allowance_bonus_overtime_curr_law": {
+        "long_name": "Number of UMAs of the allowance",
+        "description": "Limit of the allowance in terms of UMA (annual value) applicable to donations",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            3
+        ],
+        "range": {
+            "min": 0,
+            "max": 30
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },                                         
+    "_capitalgains_bonds_rate_curr_law": {
+        "long_name": "Capital Gain Tax rate",
+        "description": "An specific tax rate is applicable to capital gains from the sale of shares in the stock exchange",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.1
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },    
+    "_gambling_rate_curr_law": {
+        "long_name": "Tax rate on incomes from gambling",
+        "description": "Incomes from gambling are taxed at 1% for those states where the state taxes set rates below 6%, else is 21%",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2018"
+        ],
+        "start_year": 2018,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.01
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"        
+    },                          
     "_cit_rate": {
         "long_name": "rate at which corporates are taxed",
         "description": "Corporate Tax rate",
