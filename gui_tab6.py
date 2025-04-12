@@ -81,7 +81,15 @@ def tab6(self):
 def display_chart(self, event, global_vars):    
     def formatter(x, pos):
         return str(round(x / 1e6, 1))
-        
+    
+    def calc_gini(values): 
+        n = len(values)
+        cumulative_income = values.sum()
+        gini_index = ((2 * np.sum((np.arange(1, n + 1) * values))) /
+                      (n * cumulative_income)) - ((n + 1) / n)
+        print(gini_index)
+        return gini_index
+    
     self.image = ImageTk.PhotoImage(Image.open("blank.png"))
     self.pic = tk.Label(self.TAB6,image=self.image)
     self.pic.place(relx = 0.20, rely = 0.1, anchor = "nw")
@@ -108,6 +116,11 @@ def display_chart(self, event, global_vars):
     data_start_year= global_vars['data_start_year']
     kakwani_list = global_vars['kakwani_list']      
    
+    distribution_json_filename= 'taxcalc/'+global_vars[tax_type+'_distribution_json_filename']
+    f= open(distribution_json_filename) 
+    distribution_vardict_dict= json.load(f)
+    income_measure= distribution_vardict_dict['income_measure']
+    
     if (selected_chart==tax_type+'_revenue_projection'):        
         df = pd.read_csv(selected_chart+'.csv', index_col=0)           
         df = df.T
@@ -268,7 +281,56 @@ def display_chart(self, event, global_vars):
         self.pic = tk.Label(self.TAB6,image=self.image)
         self.pic.place(relx = 0.20, rely = 0.1, anchor = "nw")
         self.pic.image = self.image       
-    
+    elif (selected_chart==tax_type+'_lorenz_curve'):        
+        df = pd.read_csv(selected_chart+'.csv', thousands=',', index_col=0)
+        #gini_list =  [0.512656785663004, 0.48923307967360324, 0.48409656284722513]
+        #df = pd.read_csv('pit_etr'+'.csv', index_col=0)        
+        df = df[:-1]
+        income = np.sort(df[income_measure+'_'+str(start_year)].to_numpy())
+        income = np.append([0], income)  # Start at 0
+        cum_income = np.cumsum(income) / np.sum(income)  # Normalize cumulative values
+        cum_pop = np.linspace(0, 1, len(cum_income))  # Population percentage
+        gini_income = calc_gini(income)
+        
+        tax1= df[tax_collection_var+'_'+str(start_year)].to_numpy()                    
+        tax1 = np.append([0], tax1)  # Start at 0
+        cum_tax1 = np.cumsum(tax1) / np.sum(tax1)  # Normalize cumulative values
+        #cum_pop_post = np.linspace(0, 1, len(cum_tax))  # Population percentage
+        gini_tax1 = calc_gini(tax1)
+
+        tax2= df[tax_collection_var+'_ref_'+str(start_year)].to_numpy()                           
+        tax2 = np.append([0], tax2)  # Start at 0
+        cum_tax2 = np.cumsum(tax2) / np.sum(tax2)  # Normalize cumulative values
+        gini_tax2 = calc_gini(tax2)
+       
+        plt.figure(figsize=(8, 6))
+        plt.plot(cum_pop, cum_income, label="Lorenz Curve Income")
+        plt.plot(cum_pop, cum_tax1, marker='o', markevery=0.3, label="Concentration Curve under Current Law")
+        plt.plot(cum_pop, cum_tax2, marker='s', markevery=0.2, label="Concentration Curve under Reform")      
+        plt.plot([0, 1], [0, 1], linestyle="--", color="gray")  # Perfect equality line
+        plt.fill_between(cum_pop, cum_tax1, cum_tax2, color="skyblue", alpha=0.5)
+        
+        plt.xlabel("Cumulative Population Share")
+        plt.ylabel("Cumulative Income/Tax Share")
+        plt.xlim(0, 1.0)
+        plt.ylim(0, 1.0)
+        # Add annotation
+        plt.annotate(f"Kakwani Index Current Tax:  {gini_tax1-gini_income:.2f}", 
+                     xy=(0.02, 0.7),
+                     fontsize=10, color='black')
+        plt.annotate(f"Kakwani Index Option 1:  {gini_tax2-gini_income:.2f}", 
+                     xy=(0.02, 0.65),
+                     fontsize=10, color='black')        
+        plt.title("Lorenz Curve for "+str(start_year))
+        plt.legend()
+        plt.grid(False)      
+        pic_filename1 = "lorenz.png"
+        plt.savefig(pic_filename1)
+        plt.close('all')
+        self.image = ImageTk.PhotoImage(Image.open("lorenz.png"))
+        self.pic = tk.Label(self.TAB6,image=self.image)
+        self.pic.place(relx = 0.20, rely = 0.1, anchor = "nw")
+        self.pic.image = self.image       
 
 
 def get_attribute_selection(self, event):

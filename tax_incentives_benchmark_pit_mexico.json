@@ -1,0 +1,12 @@
+{
+    "policy": {
+    "_subsidy_rate": {"2022": [0.0]},
+    "_allowance_bonus_overtime": {"2022": [0]},
+    "_allowance_pensions": {"2022": [0]},
+    "_allowance_realestate": {"2022": [0]},
+    "_allowance_land_sales": {"2022": [0]},
+    "_allowance_bonus_overtime": {"2022": [0]},
+    "_allowance_vacations_profit_sharing": {"2022": [0]},
+    "_allowance_christmas": {"2022": [0]}    
+    }
+}
