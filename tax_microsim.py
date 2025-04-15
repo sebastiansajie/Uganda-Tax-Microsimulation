@@ -396,6 +396,18 @@ class Application(tk.Frame):
     #def clicked_generate_policy_revenues(self, run_type):
     #    self.run_core_program(run_type)
     
+    def clicked_generate_policy_revenues_from_reform_file(self, reform_filename):
+        df = pd.read_csv(reform_filename)
+        self.block_selected_dict = {}
+        for idx, row in df.iterrows():
+            entry = {
+                    "selected_item": str(row["Policy Parameter"]),
+                    "selected_year": [str(row["Year"])],
+                    "selected_value": [str(row["Value"])]
+                    }
+            self.block_selected_dict[str(idx + 1)] = entry  # JSON keys start from 1
+        self.run_core_program('revenue_with_reform_file')
+        
     def clicked_generate_policy_revenues(self):
         self.run_core_program('revenue')
 
@@ -416,7 +428,7 @@ class Application(tk.Frame):
             self.vars[self.tax_type+'_display_distribution_table_bydecile'] = 0
             self.vars[self.tax_type+'_display_distribution_table_byincome'] = 1
             self.vars[self.tax_type+'_display_revenue_table'] = 0            
-        elif run_type=='revenue':
+        elif (run_type=='revenue') or (run_type=='revenue_with_reform_file'):
             self.vars[self.tax_type+'_display_distribution_table_bydecile'] = 0
             self.vars[self.tax_type+'_display_distribution_table'] = 0
             self.vars[self.tax_type+'_display_revenue_table'] = 1
@@ -426,14 +438,14 @@ class Application(tk.Frame):
             self.vars[self.tax_type+'_display_revenue_table'] = 0            
             
         self.save_inputs()
-
-        self.block_selected_dict = self.generate_changes_dict(self.block_widget_dict, 
-                                                              self.year_value_pairs_policy_dict, 
-                                                              year_check=1, 
-                                                              start_year=global_vars['start_year'], 
-                                                              end_year=global_vars['end_year'],
-                                                              sector_widget=0)
-
+        
+        if (run_type!='revenue_with_reform_file'):
+            self.block_selected_dict = self.generate_changes_dict(self.block_widget_dict, 
+                                                                  self.year_value_pairs_policy_dict, 
+                                                                  year_check=1, 
+                                                                  start_year=global_vars['start_year'], 
+                                                                  end_year=global_vars['end_year'],
+                                                                  sector_widget=0)
         with open('reform.json', 'w') as f:
             f.write(json.dumps(self.block_selected_dict, indent=2))
 
