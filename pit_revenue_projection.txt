@@ -1,8 +1,7 @@
-                        2022     2023     2024     2025     2026     2027
-current_law_All      1129.99  1255.40  1337.91  1240.72  1240.72  1240.72
-reform_All           1129.99  1255.40  1337.91  1240.72  1240.72  1240.72
-reform_behavior_All  1129.99  1255.40  1337.91  1240.72  1240.72  1240.72
+                    2022     2023     2024     2025     2026     2027
+current_law_All  1129.99  1255.40  1337.91  1240.72  1240.72  1240.72
+reform_All       1129.99  1255.40  1339.75  1242.43  1242.43  1242.43
 
-                                                                                                                                                                                                                                                                              policy
-2022  {'_elasticity_pit_taxable_income_value': [[0.0, 0.2, 0.4]], '_elasticity_pit_taxable_income_threshold': [[100000.0, 1000000.0, 9e+99]], '_elasticity_pit_capital_income_value': [[0.0, 0.2, 0.4]], '_elasticity_pit_capital_income_threshold': [[100000.0, 1000000.0, 9e+99]]}
+                   policy
+2024  {'_rate11': [0.37]}
 
