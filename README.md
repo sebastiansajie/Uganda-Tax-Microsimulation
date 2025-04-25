@@ -2,7 +2,7 @@
 [![Codecov](https://codecov.io/gh/TPRU-demo/pitaxcalc-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/TPRU-demo/pitaxcalc-demo)
 
 
-Demonstration repository for Personal Income Tax (PIT) microsimulation model
+Demonstration repository for Botswana microsimulation model
 ============================================================================
 
 This repository will be used in the IMF training
