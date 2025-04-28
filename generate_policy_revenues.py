@@ -197,12 +197,22 @@ def generate_policy_revenues():
     # specify Calculator objects for current-law policy
     calc1 = Calculator(policy=pol, records=recs, corprecords=crecs, gstrecords=grecs, verbose=verbose)    
     assert isinstance(calc1, Calculator)
+    #print(calc1.current_year)
     assert calc1.current_year == data_start_year
     np.seterr(divide='ignore', invalid='ignore')
     pol2 = Policy(DEFAULTS_FILENAME=global_variables['DEFAULTS_FILENAME'])      
     years, reform=read_reform_dict(block_selected_dict)
     pol2.implement_reform(reform['policy'])
     calc2 = Calculator(policy=pol2, records=recs, corprecords=crecs, gstrecords=grecs, verbose=verbose)
+
+    # dump out records
+    dump_vars = ['id_n', 'Year', 'CONS_Food', 'CONS_Non_Food', 'etr_Food',
+                 'etr_Non_Food', 'vat_Food', 'vat_Non_Food', 'vatax']
+    dumpdf = calc1.dataframe(dump_vars)
+    column_order = dumpdf.columns
+    
+    dumpdf.to_csv('app1-dump_vat.csv', columns=column_order,
+                  index=False, float_format='%.0f')
 
     #tax_collection_var = tax_collection_var_list[0]
     id_var = id_varlist[0]
@@ -218,7 +228,7 @@ def generate_policy_revenues():
         #print('block_selected_dict in adjust behavior',block_selected_dict)
         pol3 = Policy(DEFAULTS_FILENAME=global_variables['DEFAULTS_FILENAME'])   
         years, reform=read_reform_dict(block_selected_dict)
-        #print('reform dict in adjust behavior', reform)
+        print('reform dict in adjust behavior', reform)
         pol3.implement_reform(reform['policy'])
         calc3 = Calculator(policy=pol3, records=recs, corprecords=crecs, gstrecords=grecs, verbose=verbose)
       

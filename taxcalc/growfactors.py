@@ -190,6 +190,9 @@ class GrowFactors(object):
         """
         Return value of factor with specified name for specified year.
         """
+        #print("name ", name)
+        #print("year ", year)
+        #print("grow factor valid names ", GrowFactors.VALID_NAMES)
         self.used = True
         if name not in GrowFactors.VALID_NAMES:
             msg = 'name={} not in GrowFactors.VALID_NAMES'

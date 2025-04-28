@@ -1,0 +1,33 @@
+﻿field_category,field_name,required,type,desc,form,2015,cross_year,attribute
+read,id_n,true,int,Unique positive numeric identifier for filing unit,,National Household Survey 2015,No,No
+read,Year,true,int,Year,,National Household Survey 2015,No,No
+read,weight,true,float,Weight,,National Household Survey 2015,No,No
+read,CONS_Total,true,float,Consumption Total,,Calculated from National Household Survey 2015,No,No
+read,CONS_Other,true,float,Consumption on Other Items = Non_Food,,Calculated from National Household Survey 2015,No,No
+read,GROSS_INCOME,false,float,Gross Income,,National Household Survey 2015,No,No
+read,CONS_Food,false,float,Consumption of Food,,National Household Survey 2015,No,No
+read,CONS_Alcohol_Tobacco,false,float,Consumption of Alcohol_Tobacco,,National Household Survey 2015,No,No
+read,CONS_Clothing_Footwear,false,float,Consumption of Clothing_Footwear,,National Household Survey 2015,No,No
+read,CONS_Housing,false,float,Consumption of Housing,,National Household Survey 2015,No,No
+read,CONS_Hhold_Goods_Services,false,float,Consumption of Hhold_Goods_Services,,National Household Survey 2015,No,No
+read,CONS_Health,false,float,Consumption of Health,,National Household Survey 2015,No,No
+read,CONS_Transport,false,float,Consumption of Transport,,National Household Survey 2015,No,No
+read,CONS_Communication,false,float,Consumption of Communication,,National Household Survey 2015,No,No
+read,CONS_Recreation_Culture,false,float,Consumption of Recreation_Culture,,National Household Survey 2015,No,No
+read,CONS_Education,false,float,Consumption of Education,,National Household Survey 2015,No,No
+read,CONS_Restaurants_Hotels,false,float,Consumption of Restaurants_Hotels,,National Household Survey 2015,No,No
+read,CONS_Miscellaneous,false,float,Consumption of Miscellaneous,,National Household Survey 2015,No,No
+calc,CONS_Total,false,float,Consumption Total,,Calculated from National Household Survey 2015,,
+calc,CONS_Food,false,float,Consumption on Food,,Calculated from National Household Survey 2015,,
+calc,CONS_Non_Food,false,float,Consumption on Non_Food,,Calculated from National Household Survey 2015,,
+calc,CONS_Food_behavior,false,float,Consumption on Food asjusted for behavior,,Calculated from National Household Survey 2015,,
+calc,CONS_Non_Food_behavior,false,float,Consumption on Non Food asjusted for behavior,,Calculated from National Household Survey 2015,,
+calc,CONS_Other,false,float,Consumption on Other Items = Non_Food,,Calculated from National Household Survey 2015,,
+calc,etr_Food,false,float,Effective Tax Rate on Food Consumption,,Calculated by the Model,,
+calc,etr_Non_Food,false,float,Effective Tax Rate on Consumption on Other Items = Non_Food,,Calculated by the Model,,
+calc,etr_Other,false,float,Effective Tax Rate on Consumption on Other Items = Non_Food,,Calculated by the Model,,
+calc,etr_Food_curr_law,false,float,Effective Tax Rate on Food Consumption,,Calculated by the Model,,
+calc,etr_Non_Food_curr_law,false,float,Effective Tax Rate on Consumption on Other Items = Non_Food,,Calculated by the Model,,
+calc,vat_Food,false,float,VAT on Food,,Calculated by the Model,,
+calc,vat_Non_Food,false,float,VAT on Non Food,,Calculated by the Model,,
+calc,vatax,false,float,VAT,,Calculated by the Model,,

@@ -417,6 +417,7 @@ class Calculator(object):
         # GST calculations
         if self.gstrecords is not None:
             for i in range(len(self.vat_function_names)):
+                #print('function name ', self.vat_function_names[str(i)])
                 func_name = globals()[self.vat_function_names[str(i)]]
                 #print(function_names[str(i)])
                 func_name(self.__policy, self.__gstrecords)
@@ -568,7 +569,10 @@ class Calculator(object):
         elif tax_type == 'cit':
             wtd_total_tax = {}
             wtd_total_tax['All'] = (tax_data * self.carray('weight')).sum()
-
+        elif tax_type == 'vat':
+            wtd_total_tax = {}
+            wtd_total_tax['All'] = (tax_data * self.garray('weight')).sum()
+            
         # We have  calculated for 'All' so no need to calculate further
         attribute_types.remove('All')
         if len(attribute_var)>0:            
@@ -578,6 +582,8 @@ class Calculator(object):
                     wtd_total_tax[attribute_value] = (tax_data * self.array('weight') * attribute_bool).sum()
                 elif tax_type == 'cit':
                     wtd_total_tax[attribute_value] = (tax_data * self.carray('weight') * attribute_bool).sum()     
+                elif tax_type == 'vat':
+                    wtd_total_tax[attribute_value] = (tax_data * self.garray('weight') * attribute_bool).sum()
         #print(wtd_total_cit)
         return wtd_total_tax
             
@@ -694,11 +700,11 @@ class Calculator(object):
             if self.gstrecords is not None:
                 if attribute_var is not None:
                     if attribute_value == 'All':
-                        return self.dataframe_gst(DIST_VARIABLES)
+                        return self.dataframe_vat(DIST_VARIABLES)
                     else:
-                        return self.dataframe_gst(DIST_VARIABLES, attribute_value, attribute_var)
+                        return self.dataframe_vat(DIST_VARIABLES, attribute_value, attribute_var)
                 else:
-                        return self.dataframe_gst(DIST_VARIABLES)            
+                        return self.dataframe_vat(DIST_VARIABLES)            
         else:
             msg = 'tax type ="{}" is not valid'
             raise ValueError(msg.format(tax_type))

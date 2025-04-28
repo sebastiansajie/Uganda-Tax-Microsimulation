@@ -36,9 +36,9 @@ def initialize_vars(self):
     self.reform={}
     self.selected_item = ""
     self.selected_value = ""
-    self.selected_year = 2022
+    self.selected_year = 2024
     self.sub_directory = "taxcalc"
-    self.year_list = [2022, 2023, 2024, 2025, 2026, 2027]
+    self.year_list = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030]
     # Include a check whether the years are valid by looking at the 
     # selected growfactors file
     """    
@@ -139,6 +139,32 @@ def initialize_vars(self):
     
     self.vars['cit_max_lag_years'] = 10
 
+    self.vars['DEFAULTS_FILENAME'] = "current_law_policy_vat_botswana.json"
+    self.vars['GROWFACTORS_FILENAME'] = "growfactors_vat_botswana.csv" 
+    self.vars['vat_data_filename'] = "vat_botswana.csv"
+    self.vars['vat_weights_filename'] = "vat_weights_botswana.csv"
+    self.vars['vat_records_variables_filename'] = "records_variables_vat_botswana.json"
+    self.vars['vat_benchmark_filename'] = "tax_incentives_benchmark_vat_botswana.json"
+    self.vars['vat_elasticity_filename'] = "elasticity_pit_training.json"
+    self.vars['vat_functions_filename'] = "functions_vat_botswana.py"
+    self.vars['vat_function_names_filename'] = "function_names_vat_botswana.json"
+    self.vars['vat_distribution_json_filename'] = "vat_distribution_botswana.json"   
+    self.vars['gdp_filename'] = 'gdp_nominal_training.csv'
+    
+    """
+    self.vars['DEFAULTS_FILENAME'] = "current_law_policy_vat_Indonesia.json"
+    self.vars['GROWFACTORS_FILENAME'] = "growfactors_vat_indonesia.csv" 
+    self.vars['vat_data_filename'] = "vat_indo_sample.csv"
+    self.vars['vat_weights_filename'] = "vat_indo_sample_weights.csv"
+    self.vars['vat_records_variables_filename'] = "records_variable_vat_Indonesia.json"
+    self.vars['vat_benchmark_filename'] = "tax_incentives_benchmark_vat_Indonesia.json"
+    self.vars['vat_elasticity_filename'] = "elasticity_pit_training.json"
+    self.vars['vat_functions_filename'] = "functions_vat_indonesia.py"
+    self.vars['vat_function_names_filename'] = "function_names_vat_indonesia.json"
+    self.vars['vat_distribution_json_filename'] = "vat_distribution_indo.json"   
+    self.vars['gdp_filename'] = 'gdp_nominal_training.csv'
+    
+      
     self.vars['vat_data_filename'] = "vat.csv"
     self.vars['vat_weights_filename'] = "vat_weights.csv"
     self.vars['vat_records_variables_filename'] = "vat_records_variables.json"   
@@ -147,6 +173,7 @@ def initialize_vars(self):
     self.vars['vat_functions_filename'] = "vat_functions.py"
     self.vars['vat_function_names_filename'] = "vat_function_names.json"
     self.vars['vat_distribution_json_filename'] = 'vat_distribution.json'
+    """  
     
     self.vars['pit_display_distribution_table_byincome'] = 0
     self.vars['pit_display_distribution_table_bydecile'] = 0
@@ -164,9 +191,9 @@ def initialize_vars(self):
     
     self.vars['kakwani_list'] = []
     
-    self.vars['start_year'] = 2022
-    self.vars['end_year']=2027
-    self.vars['data_start_year'] = 2022
+    self.vars['start_year'] = 2024
+    self.vars['end_year']=2030
+    self.vars['data_start_year'] = 2015
 
     df= pd.read_csv(self.vars['gdp_filename'])
     df = df.set_index('Year')
@@ -291,8 +318,7 @@ def display_entry(self, widget, tax_type):
             self.vars['data_start_year'] = 2022
             #self.vars['SALARY_VARIABLE'] = "EmpIncRemuneration"
             self.vars['SALARY_VARIABLE'] = "SALARY"
-            self.vars['pit_id_var'] = 'id_n'
-           
+            self.vars['pit_id_var'] = 'id_n'          
         elif tax_type == 'cit':
             #self.vars['DEFAULTS_FILENAME'] = "current_law_policy_cit_egypt.json"    
             #self.vars['GROWFACTORS_FILENAME'] = "growfactors_egypt.csv"
@@ -302,6 +328,17 @@ def display_entry(self, widget, tax_type):
             self.vars['data_start_year'] = 2022
             self.vars['SALARY_VARIABLE'] = "SALARY"
             self.vars['cit_id_var'] = 'Taxpayer_ID'
+        elif tax_type == 'vat':
+            #self.vars['DEFAULTS_FILENAME'] = "current_law_policy_pit_training.json"
+            #self.vars['GROWFACTORS_FILENAME'] = "growfactors_pit_training.csv"
+            self.vars['DEFAULTS_FILENAME'] = "current_law_policy_vat_botswana.json"
+            self.vars['GROWFACTORS_FILENAME'] = "growfactors_vat_botswana.csv"
+
+            self.vars['start_year'] = 2024
+            self.vars['data_start_year'] = 2015
+            #self.vars['SALARY_VARIABLE'] = "EmpIncRemuneration"
+            self.vars['SALARY_VARIABLE'] = "GROSS_INCOME"
+            self.vars['vat_id_var'] = 'id_n'
         
         self.grid_placement(block_1_title_pos_x)
         self.l1[tax_type]=Label(self.TAB1,text="Data Inputs "+ tax_type.upper(),
@@ -457,10 +494,12 @@ def tab1(self):
     self.vars['cit'] = 0
     self.vars['vat'] = 0
     
-    self.status['pit'] = tk.NORMAL
-    self.status['cit'] = tk.NORMAL
-    #self.status['vat'] = tk.NORMAL
-    self.status['vat'] = tk.DISABLED
+    #self.status['pit'] = tk.NORMAL
+    self.status['pit'] = tk.DISABLED
+    #self.status['cit'] = tk.NORMAL
+    self.status['cit'] = tk.DISABLED
+    self.status['vat'] = tk.NORMAL
+    #self.status['vat'] = tk.DISABLED
     
     self.block_1_title_pos_x = 0.15
     self.block_1_title_box_y = 0.15

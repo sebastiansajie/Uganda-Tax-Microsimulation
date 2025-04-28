@@ -1,0 +1,187 @@
+{
+    "read": {
+        "id_n": {
+            "required": true,
+            "type": "int",
+            "desc": "Unique positive numeric identifier for filing unit",
+            "form": {
+                "2015": "National Household Survey 2015"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Year": {
+            "required": true,
+            "type": "int",
+            "desc": "Year",
+            "form": {
+                "2015": "National Household Survey 2016"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "weight": {
+            "required": true,
+            "type": "float",
+            "desc": "Weight",
+            "form": {
+                "2015": "National Household Survey 2017"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "GROSS_INCOME": {
+            "required": false,
+            "type": "float",
+            "desc": "Gross Income",
+            "form": {
+                "2015": "National Household Survey 2018"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Food": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Food",
+            "form": {
+                "2015": "National Household Survey 2019"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Alcohol_Tobacco": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Alcohol_Tobacco",
+            "form": {
+                "2015": "National Household Survey 2020"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Clothing_Footwear": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Clothing_Footwear",
+            "form": {
+                "2015": "National Household Survey 2021"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Housing": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Housing",
+            "form": {
+                "2015": "National Household Survey 2022"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Hhold_Goods_Services": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Hhold_Goods_Services",
+            "form": {
+                "2015": "National Household Survey 2023"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Health": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Health",
+            "form": {
+                "2015": "National Household Survey 2024"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Transport": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Transport",
+            "form": {
+                "2015": "National Household Survey 2025"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Communication": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Communication",
+            "form": {
+                "2015": "National Household Survey 2026"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Recreation_Culture": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Recreation_Culture",
+            "form": {
+                "2015": "National Household Survey 2027"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Education": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Education",
+            "form": {
+                "2015": "National Household Survey 2028"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Restaurants_Hotels": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Restaurants_Hotels",
+            "form": {
+                "2015": "National Household Survey 2029"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Miscellaneous": {
+            "required": false,
+            "type": "float",
+            "desc": "Consumption of Miscellaneous",
+            "form": {
+                "2015": "National Household Survey 2030"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        }
+    },
+    "calc": {
+        "vat_Food": {
+            "type": "float",
+            "desc": "VAT on Food",
+            "form": {
+                "2015": "nan"
+            }
+        },
+        "vat_Non_Food": {
+            "type": "float",
+            "desc": "VAT on Non Food",
+            "form": {
+                "2015": "nan"
+            }
+        },
+        "vatax": {
+            "type": "float",
+            "desc": "VAT",
+            "form": {
+                "2015": "National Household Survey 2015"
+            }
+        }
+    }
+}
