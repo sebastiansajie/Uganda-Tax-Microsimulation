@@ -90,9 +90,13 @@ def display_chart(self, event, global_vars):
         print(gini_index)
         return gini_index
     
+    
+    image_pos_x = 0.22
+    image_pos_y = 0.05
+    
     self.image = ImageTk.PhotoImage(Image.open("blank.png"))
     self.pic = tk.Label(self.TAB6,image=self.image)
-    self.pic.place(relx = 0.20, rely = 0.1, anchor = "nw")
+    self.pic.place(relx = image_pos_x, rely = image_pos_y, anchor = "nw")
     self.pic.image = self.image 
    
     #self.selected_attribute_chart = self.attribute_selection.get()
@@ -112,6 +116,7 @@ def display_chart(self, event, global_vars):
         tax_collection_var = 'citax'        
     else:
         tax_type = 'vat'
+        tax_collection_var = 'vatax' 
     start_year= global_vars['start_year']
     data_start_year= global_vars['data_start_year']
     kakwani_list = global_vars['kakwani_list']      
@@ -138,6 +143,13 @@ def display_chart(self, event, global_vars):
             else:
                 df = df[df.columns[:2]]
                 df.columns=['Current Law', 'Reform']
+        elif tax_type == 'vat':
+            df = df
+            if self.vars[tax_type+'_adjust_behavior']:
+                df.columns=['Current Law', 'Reform', 'Behavior']
+            else:
+                df.columns=['Current Law', 'Reform']
+                
         df1 = df.rename_axis('Year').reset_index()
         fig, ax = plt.subplots(figsize=(8, 6))
         plt.plot(df1['Year'], df1['Current Law'], color='b', marker='x',
@@ -152,7 +164,7 @@ def display_chart(self, event, global_vars):
         plt.close('all')
         self.image = ImageTk.PhotoImage(Image.open("rev_forecast.png"))
         self.pic = tk.Label(self.TAB6,image=self.image)
-        self.pic.place(relx = 0.20, rely = 0.1, anchor = "nw")
+        self.pic.place(relx = image_pos_x, rely = image_pos_y, anchor = "nw")
         self.pic.image = self.image
         
     elif (selected_chart==tax_type+'_distribution_table'):
@@ -163,7 +175,8 @@ def display_chart(self, event, global_vars):
         fig, ax = plt.subplots(figsize=(8, 8))  
         #drop the rows that includes the average and top 1%
         df=df[:-4]
-        ax = df.plot(kind='bar',y=[tax_collection_var+'_'+str(data_start_year), tax_collection_var+'_'+str(start_year), tax_collection_var+'_ref_'+str(start_year)],figsize=(7, 7))
+        #ax = df.plot(kind='bar',y=[tax_collection_var+'_'+str(data_start_year), tax_collection_var+'_'+str(start_year), tax_collection_var+'_ref_'+str(start_year)],figsize=(7, 7))
+        ax = df.plot(kind='bar',y=[tax_collection_var+'_'+str(start_year), tax_collection_var+'_ref_'+str(start_year)],figsize=(7, 7))
         ax.set_xlabel("Assessable Income Deciles")
         ax.yaxis.set_major_formatter(formatter)
         ax.yaxis.set_minor_formatter(NullFormatter())
@@ -173,7 +186,7 @@ def display_chart(self, event, global_vars):
         plt.close('all')
         self.image = ImageTk.PhotoImage(Image.open("distribution_chart.png"))
         self.pic = tk.Label(self.TAB6,image=self.image)
-        self.pic.place(relx = 0.20, rely = 0.1, anchor = "nw")
+        self.pic.place(relx = image_pos_x, rely = image_pos_y, anchor = "nw")
         self.pic.image = self.image
         
     elif (selected_chart==tax_type+'_distribution_table_top1'):
@@ -182,7 +195,8 @@ def display_chart(self, event, global_vars):
         df = df.set_index('index')
         df.index.names = ['Decile']
         fig, ax = plt.subplots(figsize=(8, 8))              
-        ax=df.plot(kind='bar',y=[tax_collection_var+'_'+str(data_start_year), tax_collection_var+'_'+str(start_year), tax_collection_var+'_ref_'+str(start_year)],figsize=(7, 7))       
+        #ax=df.plot(kind='bar',y=[tax_collection_var+'_'+str(start_year), tax_collection_var+'_ref_'+str(start_year+1)],figsize=(7, 7))       
+        ax=df.plot(kind='bar',y=[tax_collection_var+'_'+str(start_year), tax_collection_var+'_ref_'+str(start_year)],figsize=(7, 7))       
         ax.set_xlabel("Assessable Income Deciles")
         ax.yaxis.set_major_formatter(formatter)
         ax.yaxis.set_minor_formatter(NullFormatter())
@@ -192,7 +206,7 @@ def display_chart(self, event, global_vars):
         plt.close('all')
         self.image = ImageTk.PhotoImage(Image.open("distribution_chart_top.png"))
         self.pic = tk.Label(self.TAB6,image=self.image)
-        self.pic.place(relx = 0.20, rely = 0.1, anchor = "nw")
+        self.pic.place(relx = image_pos_x, rely = image_pos_y, anchor = "nw")
         self.pic.image = self.image
     
     elif (selected_chart==tax_type+'_distribution_table_income_bins'):
@@ -248,7 +262,7 @@ def display_chart(self, event, global_vars):
         plt.close('all')
         self.image = ImageTk.PhotoImage(Image.open("tax_contribution.png"))
         self.pic = tk.Label(self.TAB6,image=self.image)
-        self.pic.place(relx = 0.20, rely = 0.1, anchor = "nw")
+        self.pic.place(relx = image_pos_x, rely = image_pos_y, anchor = "nw")
         self.pic.image = self.image
         
     elif (selected_chart==tax_type+'_etr'):        
@@ -274,12 +288,13 @@ def display_chart(self, event, global_vars):
         ax.text(5, 5.5*(maxy/10), kakwani_text0, fontsize = 8)
         ax.text(5, 5*(maxy/10), kakwani_text1, fontsize = 8)
         ax.text(5, 4.5*(maxy/10), kakwani_text2, fontsize = 8)
+        plt.ylim(0, maxy*1.5)
         pic_filename1 = "etr.png"
         plt.savefig(pic_filename1)
         plt.close('all')
         self.image = ImageTk.PhotoImage(Image.open("etr.png"))
         self.pic = tk.Label(self.TAB6,image=self.image)
-        self.pic.place(relx = 0.20, rely = 0.1, anchor = "nw")
+        self.pic.place(relx = image_pos_x, rely = image_pos_y, anchor = "nw")
         self.pic.image = self.image       
     elif (selected_chart==tax_type+'_lorenz_curve'):        
         df = pd.read_csv(selected_chart+'.csv', thousands=',', index_col=0)
@@ -329,7 +344,7 @@ def display_chart(self, event, global_vars):
         plt.close('all')
         self.image = ImageTk.PhotoImage(Image.open("lorenz.png"))
         self.pic = tk.Label(self.TAB6,image=self.image)
-        self.pic.place(relx = 0.20, rely = 0.1, anchor = "nw")
+        self.pic.place(relx = image_pos_x, rely = image_pos_y, anchor = "nw")
         self.pic.image = self.image       
 
 

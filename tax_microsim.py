@@ -477,19 +477,21 @@ class Application(tk.Frame):
                                'Year', 'Value', 
                                 self.sub_directory+'/'+global_vars['GROWFACTORS_FILENAME'])
         
-        progress_bar = Progress_Bar(self.master)
-        self.progressbar, self.progress_label = progress_bar.progressbar
+
         if run_type=='tax_expenditure':
-            from generate_tax_expenditures import generate_tax_expenditures  
-            self.foo_thread = Thread(target=generate_tax_expenditures)
-        else: 
+            from generate_tax_expenditures import generate_tax_expenditures
+            generate_tax_expenditures()
+            #self.foo_thread = Thread(target=generate_tax_expenditures)
+        else:
+            progress_bar = Progress_Bar(self.master)
+            self.progressbar, self.progress_label = progress_bar.progressbar
             from generate_policy_revenues import generate_policy_revenues    
             self.foo_thread = Thread(target=generate_policy_revenues)
             
-        self.foo_thread.daemon = True
-        self.progressbar.start(interval=10)
-        self.foo_thread.start()
-        self.master.after(20, self.check_thread)
+            self.foo_thread.daemon = True
+            self.progressbar.start(interval=10)
+            self.foo_thread.start()
+            self.master.after(20, self.check_thread)
         # self.image = tk.PhotoImage(file="world_bank.png")
         # self.pic = tk.Label(self.TAB6,image=self.image)
         # self.pic.place(relx = 0.45, rely = 0.2, anchor = "nw")

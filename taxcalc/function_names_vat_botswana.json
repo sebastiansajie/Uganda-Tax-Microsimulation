@@ -1,0 +1,15 @@
+{
+    "0": "cal_CONS_Food",
+    "1": "cal_CONS_Non_Food",
+    "2": "cal_CONS_Other",
+    "3": "cal_CONS_Total",
+    "4": "cal_etr_Food",
+    "5": "cal_etr_Food_curr_law",
+    "6": "cal_etr_Non_Food",
+    "7": "cal_etr_Non_Food_curr_law",
+    "8": "cal_CONS_Food_behavior",
+    "9": "cal_CONS_Non_Food_behavior",
+    "10": "cal_vat_food",
+    "11": "cal_vat_non_food",
+    "12": "cal_vat"
+}

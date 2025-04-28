@@ -78,9 +78,9 @@ class super_combo(tk.Frame):
         self.combo_x = self.pos_x
         self.combo_y = self.combo_label_y + self.label_combo_gap_y
         self.combo_width_x = 0.15
-        self.combo_entry_gap_x = 0.02
+        self.combo_entry_gap_x = 0.05
         self.combo_label_gap_x = 0.02
-        self.entry_entry_gap_x = 0.02
+        self.entry_entry_gap_x = 0.03
         self.entry_1_width_x = 0.03
         self.entry_2_width_x = 0.04
         self.entry_entry_gap_y = 0.03
@@ -88,7 +88,7 @@ class super_combo(tk.Frame):
         self.combo_button_gap_y = 0.06
         self.label_width_x = 0.02
         if self.attribute_value is not None:
-            self.combo_label_gap_x = 0.12
+            self.combo_label_gap_x = 0.15
 
         if width == 1:
             self.entry_1_label_x = self.combo_x + self.combo_width_x + self.combo_entry_gap_x

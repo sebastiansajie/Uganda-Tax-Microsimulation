@@ -82,7 +82,9 @@ class GSTRecords(object):
     vars = json.load(f)
     #print("vars in gstrecords", vars)
     
-    GSTCSV_YEAR = 2017
+    #GSTCSV_YEAR = 2017
+    GSTCSV_YEAR = int(vars["data_start_year"])
+    #PITCSV_YEAR = int(vars["data_start_year"])
 
     CUR_PATH = os.path.abspath(os.path.dirname(__file__))
     GST_DATA_FILENAME = vars['vat_data_filename']
@@ -120,7 +122,7 @@ class GSTRecords(object):
         # specify current_year and ASSESSMENT_YEAR values
         if isinstance(start_year, int):
             self.__current_year = start_year
-            self.ASSESSMENT_YEAR.fill(start_year)
+            self.Year.fill(start_year)
         else:
             msg = 'start_year is not an integer'
             raise ValueError(msg)
@@ -238,8 +240,8 @@ class GSTRecords(object):
         """
         # pylint: disable=too-many-locals,too-many-statements
 
-        GF_CONSUMPTION = self.gfactors.factor_value('CONSUMPTION', year)
-        GF_OTHER = self.gfactors.factor_value('OTHER_CONS_ITEM', year)
+        GF_CONSUMPTION = self.gfactors.factor_value('CONS_Total', year)
+        GF_OTHER = self.gfactors.factor_value('CONS_Other', year)
 
         for v in GSTRecords.FIELD_VARS:
             if v.startswith('CONS_') and not(v.startswith('CONS_OTHER')):
