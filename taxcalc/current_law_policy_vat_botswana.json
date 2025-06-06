@@ -14,7 +14,7 @@
         "col_var": "",
         "col_label": "",
         "value": [
-            0.14
+            0.0
         ],
         "boolean_value": false,
         "integer_value": false,
@@ -107,7 +107,7 @@
         "out_of_range_maxmsg": "",
         "out_of_range_action": "stop"
     },
-    "_rate_Household_Goods_Services": {
+    "_rate_Hhold_Goods_Services": {
         "long_name": "VAT Rate for Consumption of Household_Goods_Services",
         "description": "VAT Rate for Consumption of Household_Goods_Services",
         "itr_ref": "VAT Act",
@@ -149,7 +149,7 @@
         "col_var": "",
         "col_label": "",
         "value": [
-            0.14
+            0.0
         ],
         "boolean_value": false,
         "integer_value": false,
@@ -257,7 +257,7 @@
         "col_var": "",
         "col_label": "",
         "value": [
-            0.14
+            0.0
         ],
         "boolean_value": false,
         "integer_value": false,
@@ -338,7 +338,7 @@
         "col_var": "",
         "col_label": "",
         "value": [
-            0.14
+            0.01
         ],
         "boolean_value": false,
         "integer_value": false,
@@ -431,7 +431,7 @@
         "out_of_range_maxmsg": "",
         "out_of_range_action": "stop"
     },
-    "_rate_Household_Goods_Services_curr_law": {
+    "_rate_Hhold_Goods_Services_curr_law": {
         "long_name": "VAT Rate for Consumption of Household_Goods_Services",
         "description": "VAT Rate for Consumption of Household_Goods_Services",
         "itr_ref": "VAT Act",
@@ -473,7 +473,7 @@
         "col_var": "",
         "col_label": "",
         "value": [
-            0.14
+            0.01
         ],
         "boolean_value": false,
         "integer_value": false,
@@ -581,7 +581,7 @@
         "col_var": "",
         "col_label": "",
         "value": [
-            0.14
+            0.01
         ],
         "boolean_value": false,
         "integer_value": false,

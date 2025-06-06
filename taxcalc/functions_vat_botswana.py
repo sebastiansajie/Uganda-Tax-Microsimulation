@@ -12,32 +12,26 @@ import numpy as np
 from taxcalc.decorators import iterate_jit
 
 @iterate_jit(nopython=True)
-def cal_CONS_Food(CONS_Food):
-    """
-    """  
-    return CONS_Food
-
-@iterate_jit(nopython=True)
-def cal_CONS_Non_Food(CONS_Alcohol_Tobacco, CONS_Clothing_Footwear,	CONS_Housing, 
+def cal_CONS_Non_Food(CONS_Clothing_Footwear,	CONS_Housing, 
                       CONS_Hhold_Goods_Services, CONS_Health, CONS_Transport, 
                       CONS_Communication, CONS_Recreation_Culture, CONS_Education, 
                       CONS_Restaurants_Hotels,	 CONS_Miscellaneous, CONS_Non_Food):
     """
     """
-    CONS_Non_Food = (CONS_Alcohol_Tobacco + CONS_Clothing_Footwear + CONS_Housing + 
+    CONS_Non_Food = (CONS_Clothing_Footwear + CONS_Housing + 
                   CONS_Hhold_Goods_Services + CONS_Health + CONS_Transport + 
                   CONS_Communication + CONS_Recreation_Culture + CONS_Education + 
                   CONS_Restaurants_Hotels + CONS_Miscellaneous)    
     return CONS_Non_Food
 
 @iterate_jit(nopython=True)
-def cal_CONS_Other(CONS_Alcohol_Tobacco, CONS_Clothing_Footwear,	CONS_Housing, 
+def cal_CONS_Other(CONS_Clothing_Footwear,	CONS_Housing, 
                    CONS_Hhold_Goods_Services, CONS_Health, CONS_Transport, 
                    CONS_Communication, CONS_Recreation_Culture, CONS_Education, 
                    CONS_Restaurants_Hotels,	 CONS_Miscellaneous, CONS_Other):
     """
     """
-    CONS_Other = (CONS_Alcohol_Tobacco + CONS_Clothing_Footwear + CONS_Housing + 
+    CONS_Other = (CONS_Clothing_Footwear + CONS_Housing + 
                   CONS_Hhold_Goods_Services + CONS_Health + CONS_Transport + 
                   CONS_Communication + CONS_Recreation_Culture + CONS_Education + 
                   CONS_Restaurants_Hotels + CONS_Miscellaneous)
@@ -51,66 +45,7 @@ def cal_CONS_Total(CONS_Food, CONS_Other, CONS_Total):
     return CONS_Total
 
 @iterate_jit(nopython=True)
-def cal_etr_Food(rate_Food, etr_Food):
-    """
-    """
-    etr_Food = rate_Food
-
-    return etr_Food
-
-@iterate_jit(nopython=True)
-def cal_etr_Food_curr_law(rate_Food_curr_law, CONS_Food, etr_Food_curr_law):
-    """
-    """
-
-    etr_Food_curr_law = rate_Food_curr_law
-    
-    return etr_Food_curr_law
-
-@iterate_jit(nopython=True)
-def cal_etr_Non_Food(rate_Alcohol_Tobacco, rate_Clothing_Footwear, 
-                     rate_Housing, rate_Household_Goods_Services, 
-                     rate_Health, rate_Transport, rate_Communication, 
-                     rate_Recreation_Culture, rate_Education, 
-                     rate_Restaurants_Hotels, rate_Miscellaneous,
-                     CONS_Alcohol_Tobacco, CONS_Clothing_Footwear, CONS_Housing, 
-                     CONS_Hhold_Goods_Services, CONS_Health, CONS_Transport, CONS_Communication,
-                     CONS_Recreation_Culture, CONS_Education, CONS_Restaurants_Hotels,
-                     CONS_Miscellaneous, CONS_Non_Food, etr_Non_Food):
-    """
-    """
-    if CONS_Non_Food != 0:
-        etr_Non_Food = (rate_Alcohol_Tobacco*CONS_Alcohol_Tobacco+rate_Clothing_Footwear*CONS_Clothing_Footwear+
-                    rate_Housing*CONS_Housing+rate_Household_Goods_Services*CONS_Hhold_Goods_Services+
-                    rate_Health*CONS_Health+rate_Transport*CONS_Transport+
-                    rate_Communication*CONS_Communication+rate_Recreation_Culture*CONS_Recreation_Culture+
-                    rate_Education*CONS_Education+rate_Restaurants_Hotels*CONS_Restaurants_Hotels+
-                    rate_Miscellaneous*CONS_Miscellaneous)/CONS_Non_Food
-    else:
-        etr_Non_Food = 0.0       
-    return etr_Non_Food
-
-@iterate_jit(nopython=True)
-def cal_etr_Non_Food_curr_law(rate_Alcohol_Tobacco_curr_law, rate_Clothing_Footwear_curr_law, rate_Housing_curr_law, rate_Household_Goods_Services_curr_law, rate_Health_curr_law, rate_Transport_curr_law, rate_Communication_curr_law, rate_Recreation_Culture_curr_law, rate_Education_curr_law, rate_Restaurants_Hotels_curr_law, rate_Miscellaneous_curr_law,
-                     CONS_Alcohol_Tobacco, CONS_Clothing_Footwear, CONS_Housing, 
-                     CONS_Hhold_Goods_Services, CONS_Health, CONS_Transport, CONS_Communication,
-                     CONS_Recreation_Culture, CONS_Education, CONS_Restaurants_Hotels,
-                     CONS_Miscellaneous, CONS_Non_Food, etr_Non_Food_curr_law):
-    """
-    """
-    if CONS_Non_Food != 0:
-        etr_Non_Food_curr_law = (rate_Alcohol_Tobacco_curr_law*CONS_Alcohol_Tobacco+rate_Clothing_Footwear_curr_law*CONS_Clothing_Footwear+
-                    rate_Housing_curr_law*CONS_Housing+rate_Household_Goods_Services_curr_law*CONS_Hhold_Goods_Services+
-                    rate_Health_curr_law*CONS_Health+rate_Transport_curr_law*CONS_Transport+
-                    rate_Communication_curr_law*CONS_Communication+rate_Recreation_Culture_curr_law*CONS_Recreation_Culture+
-                    rate_Education_curr_law*CONS_Education+rate_Restaurants_Hotels_curr_law*CONS_Restaurants_Hotels+
-                    rate_Miscellaneous_curr_law*CONS_Miscellaneous)/CONS_Non_Food
-    else:
-        etr_Non_Food_curr_law = 0.0      
-    return etr_Non_Food_curr_law
-
-@iterate_jit(nopython=True)
-def cal_CONS_Food_behavior(elasticity_consumption_food_threshold, elasticity_consumption_food_value, etr_Food, etr_Food_curr_law, CONS_Total, CONS_Food, CONS_Food_behavior):
+def cal_Applicable_Elasticity_Food(elasticity_consumption_food_threshold, elasticity_consumption_food_value, CONS_Total, applicable_elasticity_food):
     """
     Compute consumption after adjusting for behavior.
     """
@@ -121,23 +56,17 @@ def cal_CONS_Food_behavior(elasticity_consumption_food_threshold, elasticity_con
     elasticity_consumption_value1=elasticity_consumption_food_value[1]
     elasticity_consumption_value2=elasticity_consumption_food_value[2]
     if CONS_Total<=0:
-        elasticity=0
+        applicable_elasticity_food=0
     elif CONS_Total<elasticity_consumption_threshold0:
-        elasticity=elasticity_consumption_value0
+        applicable_elasticity_food=elasticity_consumption_value0
     elif CONS_Total<elasticity_consumption_threshold1:
-        elasticity=elasticity_consumption_value1
+        applicable_elasticity_food=elasticity_consumption_value1
     else:
-        elasticity=elasticity_consumption_value2
-    rate=etr_Food
-    rate_curr_law=etr_Food_curr_law
-    # Compute the fractional change of VAT rate safely
-    frac_change_of_vat_rate = (rate - rate_curr_law) / (1+rate_curr_law)
-    frac_change_of_consumption = elasticity*frac_change_of_vat_rate
-    CONS_Food_behavior = CONS_Food*(1+frac_change_of_consumption)
-    return CONS_Food_behavior
+        applicable_elasticity_food=elasticity_consumption_value2
+    return applicable_elasticity_food
 
 @iterate_jit(nopython=True)
-def cal_CONS_Non_Food_behavior(elasticity_consumption_non_food_threshold, elasticity_consumption_non_food_value, etr_Non_Food, etr_Non_Food_curr_law, CONS_Total, CONS_Non_Food, CONS_Non_Food_behavior):
+def cal_Applicable_Elasticity_Non_Food(elasticity_consumption_non_food_threshold, elasticity_consumption_non_food_value, CONS_Total, applicable_elasticity_non_food):
     """
     Compute consumption after adjusting for behavior.
     """
@@ -148,39 +77,94 @@ def cal_CONS_Non_Food_behavior(elasticity_consumption_non_food_threshold, elasti
     elasticity_consumption_value1=elasticity_consumption_non_food_value[1]
     elasticity_consumption_value2=elasticity_consumption_non_food_value[2]
     if CONS_Total<=0:
-        elasticity=0
+        applicable_elasticity_non_food=0
     elif CONS_Total<elasticity_consumption_threshold0:
-        elasticity=elasticity_consumption_value0
+        applicable_elasticity_non_food=elasticity_consumption_value0
     elif CONS_Total<elasticity_consumption_threshold1:
-        elasticity=elasticity_consumption_value1
+        applicable_elasticity_non_food=elasticity_consumption_value1
     else:
-        elasticity=elasticity_consumption_value2
-    rate=etr_Non_Food
-    rate_curr_law=etr_Non_Food_curr_law
-    # Compute the fractional change of VAT rate safely
-    frac_change_of_vat_rate = (rate - rate_curr_law) / (1+rate_curr_law)
-    frac_change_of_consumption = elasticity*frac_change_of_vat_rate
-    CONS_Non_Food_behavior = CONS_Non_Food*(1+frac_change_of_consumption)
-    return CONS_Non_Food_behavior
+        applicable_elasticity_non_food=elasticity_consumption_value2
+    return applicable_elasticity_non_food
 
 @iterate_jit(nopython=True)
-def cal_vat_food(etr_Food, CONS_Food_behavior, vat_Food):
-    # Sum the VAT values for the following products:
-    # vat_Food_Crops, vat_Processed_Food, vat_Fruits_Vegetables_Spices, vat_Fish, vat_Meat, vat_Poultry, vat_Dairy, vat_Beverages, vat_Alcohol, vat_Tobacco, vat_Other_Non_Consumption, vat_Rent, vat_Electricity, vat_Water, vat_Fuel, vat_Other_Services, vat_Telecom, vat_Soap_Cosmetics, vat_Other_Home_Consumption, vat_Books_Newspapers, vat_Health, vat_Education, vat_Transport_Services, vat_Air_Transport, vat_Accomodation, vat_Entertainment, vat_Finance, vat_Clothing_Footwear, vat_Furniture, vat_Durable_Goods, vat_Vehicle_Purchase, vat_Other_Consumption, vat_Religious_Consumption
-    vat_Food = etr_Food*CONS_Food_behavior 
+def cal_CONS_Food_behavior_and_vat(rate_Food, rate_Food_curr_law, applicable_elasticity_food, CONS_Food, vat_Food):
+    """
+    Compute consumption after adjusting for behavior.
+    """
+    rate=rate_Food
+    rate_curr_law=rate_Food_curr_law
+    # Compute the fractional change of VAT rate safely
+    frac_change_of_vat_rate = (rate - rate_curr_law) / rate_curr_law
+    frac_change_of_consumption = applicable_elasticity_food*frac_change_of_vat_rate
+    CONS_Food_behavior = CONS_Food*(1+frac_change_of_consumption)
+    vat_Food = rate_Food*CONS_Food_behavior
     return vat_Food
 
 @iterate_jit(nopython=True)
-def cal_vat_non_food(etr_Non_Food, CONS_Non_Food_behavior, vat_Non_Food):
-    # Sum the VAT values for the following products:
-    # vat_Food_Crops, vat_Processed_Food, vat_Fruits_Vegetables_Spices, vat_Fish, vat_Meat, vat_Poultry, vat_Dairy, vat_Beverages, vat_Alcohol, vat_Tobacco, vat_Other_Non_Consumption, vat_Rent, vat_Electricity, vat_Water, vat_Fuel, vat_Other_Services, vat_Telecom, vat_Soap_Cosmetics, vat_Other_Home_Consumption, vat_Books_Newspapers, vat_Health, vat_Education, vat_Transport_Services, vat_Air_Transport, vat_Accomodation, vat_Entertainment, vat_Finance, vat_Clothing_Footwear, vat_Furniture, vat_Durable_Goods, vat_Vehicle_Purchase, vat_Other_Consumption, vat_Religious_Consumption
-    vat_Non_Food = etr_Non_Food*CONS_Non_Food_behavior 
+def cal_CONS_Non_Food_behavior_and_vat(rate_Alcohol_Tobacco, rate_Alcohol_Tobacco_curr_law,
+                                      rate_Clothing_Footwear,	rate_Clothing_Footwear_curr_law,
+                                      rate_Housing,	rate_Housing_curr_law,
+                                      rate_Hhold_Goods_Services,	rate_Hhold_Goods_Services_curr_law,
+                                      rate_Health,	rate_Health_curr_law,
+                                      rate_Transport,	rate_Transport_curr_law,
+                                      rate_Communication,	rate_Communication_curr_law,
+                                      rate_Recreation_Culture,	rate_Recreation_Culture_curr_law,
+                                      rate_Education,	rate_Education_curr_law,
+                                      rate_Restaurants_Hotels,	rate_Restaurants_Hotels_curr_law,
+                                      rate_Miscellaneous,	rate_Miscellaneous_curr_law,	CONS_Alcohol_Tobacco, 
+                                      CONS_Clothing_Footwear, CONS_Housing, CONS_Hhold_Goods_Services, 
+                                      CONS_Health, CONS_Transport, CONS_Communication, CONS_Recreation_Culture, 
+                                      CONS_Education, CONS_Restaurants_Hotels, CONS_Miscellaneous,                                   
+                                      applicable_elasticity_non_food, vat_Non_Food):
+    """
+    Compute consumption after adjusting for behavior.
+    """ 
+    
+    frac_change_of_consumption_Alcohol_Tobacco = applicable_elasticity_non_food*((rate_Alcohol_Tobacco - rate_Alcohol_Tobacco_curr_law) / rate_Alcohol_Tobacco_curr_law)
+    frac_change_of_consumption_Clothing_Footwear = applicable_elasticity_non_food*((rate_Clothing_Footwear - rate_Clothing_Footwear_curr_law) / rate_Clothing_Footwear_curr_law)
+    frac_change_of_consumption_Housing = applicable_elasticity_non_food*((rate_Housing - rate_Housing_curr_law) / rate_Housing_curr_law)
+    frac_change_of_consumption_Hhold_Goods_Services = applicable_elasticity_non_food*((rate_Hhold_Goods_Services - rate_Hhold_Goods_Services_curr_law) / rate_Hhold_Goods_Services_curr_law)
+    frac_change_of_consumption_Health = applicable_elasticity_non_food*((rate_Health - rate_Health_curr_law) / rate_Health_curr_law)
+    frac_change_of_consumption_Transport = applicable_elasticity_non_food*((rate_Transport - rate_Transport_curr_law) / rate_Transport_curr_law)
+    frac_change_of_consumption_Communication = applicable_elasticity_non_food*((rate_Communication - rate_Communication_curr_law) / rate_Communication_curr_law)
+    frac_change_of_consumption_Recreation_Culture = applicable_elasticity_non_food*((rate_Recreation_Culture - rate_Recreation_Culture_curr_law) / rate_Recreation_Culture_curr_law)
+    frac_change_of_consumption_Education = applicable_elasticity_non_food*((rate_Education - rate_Education_curr_law) / rate_Education_curr_law)
+    frac_change_of_consumption_Restaurants_Hotels = applicable_elasticity_non_food*((rate_Restaurants_Hotels - rate_Restaurants_Hotels_curr_law) / rate_Restaurants_Hotels_curr_law)
+    frac_change_of_consumption_Miscellaneous = applicable_elasticity_non_food*((rate_Miscellaneous - rate_Miscellaneous_curr_law) / rate_Miscellaneous_curr_law)
+
+    CONS_Alcohol_Tobacco_behavior = CONS_Alcohol_Tobacco*(1+frac_change_of_consumption_Alcohol_Tobacco)
+    CONS_Clothing_Footwear_behavior = CONS_Clothing_Footwear*(1+frac_change_of_consumption_Clothing_Footwear)
+    CONS_Housing_behavior = CONS_Housing*(1+frac_change_of_consumption_Housing)
+    CONS_Hhold_Goods_Services_behavior = CONS_Hhold_Goods_Services*(1+frac_change_of_consumption_Hhold_Goods_Services)
+    CONS_Health_behavior = CONS_Health*(1+frac_change_of_consumption_Health)
+    CONS_Transport_behavior = CONS_Transport*(1+frac_change_of_consumption_Transport)
+    CONS_Communication_behavior = CONS_Communication*(1+frac_change_of_consumption_Communication)
+    CONS_Recreation_Culture_behavior = CONS_Recreation_Culture*(1+frac_change_of_consumption_Recreation_Culture)
+    CONS_Education_behavior = CONS_Education*(1+frac_change_of_consumption_Education)
+    CONS_Restaurants_Hotels_behavior = CONS_Restaurants_Hotels*(1+frac_change_of_consumption_Restaurants_Hotels)
+    CONS_Miscellaneous_behavior = CONS_Miscellaneous*(1+frac_change_of_consumption_Miscellaneous)
+
+    vat_Alcohol_Tobacco = rate_Alcohol_Tobacco*CONS_Alcohol_Tobacco_behavior
+    vat_Clothing_Footwear = rate_Clothing_Footwear*CONS_Clothing_Footwear_behavior
+    vat_Housing = rate_Housing*CONS_Housing_behavior
+    vat_Hhold_Goods_Services = rate_Hhold_Goods_Services*CONS_Hhold_Goods_Services_behavior
+    vat_Health = rate_Health*CONS_Health_behavior
+    vat_Transport = rate_Transport*CONS_Transport_behavior
+    vat_Communication = rate_Communication*CONS_Communication_behavior
+    vat_Recreation_Culture = rate_Recreation_Culture*CONS_Recreation_Culture_behavior
+    vat_Education = rate_Education*CONS_Education_behavior
+    vat_Restaurants_Hotels = rate_Restaurants_Hotels*CONS_Restaurants_Hotels_behavior
+    vat_Miscellaneous = rate_Miscellaneous*CONS_Miscellaneous_behavior
+
+
+    vat_Non_Food = (vat_Alcohol_Tobacco + vat_Clothing_Footwear + vat_Housing +
+                    vat_Hhold_Goods_Services + vat_Health + vat_Transport +
+                    vat_Communication + vat_Recreation_Culture + vat_Education +
+                    vat_Restaurants_Hotels + vat_Miscellaneous)
+   
     return vat_Non_Food
 
 @iterate_jit(nopython=True)
 def cal_vat(vat_Food, vat_Non_Food, vatax):
-    # Sum the VAT values for the following products:
-    # vat_Food_Crops, vat_Processed_Food, vat_Fruits_Vegetables_Spices, vat_Fish, vat_Meat, vat_Poultry, vat_Dairy, vat_Beverages, vat_Alcohol, vat_Tobacco, vat_Other_Non_Consumption, vat_Rent, vat_Electricity, vat_Water, vat_Fuel, vat_Other_Services, vat_Telecom, vat_Soap_Cosmetics, vat_Other_Home_Consumption, vat_Books_Newspapers, vat_Health, vat_Education, vat_Transport_Services, vat_Air_Transport, vat_Accomodation, vat_Entertainment, vat_Finance, vat_Clothing_Footwear, vat_Furniture, vat_Durable_Goods, vat_Vehicle_Purchase, vat_Other_Consumption, vat_Religious_Consumption
-    vatax = vat_Food + vat_Non_Food 
-    #vatax=1.0
+    vatax = vat_Food + vat_Non_Food
     return vatax

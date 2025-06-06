@@ -196,60 +196,18 @@
                 "2015": "Calculated from National Household Survey 2015"
             }
         },
-        "CONS_Food_behavior": {
+        "applicable_elasticity_food": {
             "type": "float",
-            "desc": "Consumption on Food asjusted for behavior",
+            "desc": "Applicable elasticity based on Total Consumption_Income levels",
             "form": {
                 "2015": "Calculated from National Household Survey 2015"
             }
         },
-        "CONS_Non_Food_behavior": {
+        "applicable_elasticity_non_food": {
             "type": "float",
-            "desc": "Consumption on Non Food asjusted for behavior",
+            "desc": "Applicable elasticity based on Total Consumption_Income levels",
             "form": {
                 "2015": "Calculated from National Household Survey 2015"
-            }
-        },
-        "CONS_Other": {
-            "type": "float",
-            "desc": "Consumption on Other Items = Non_Food",
-            "form": {
-                "2015": "Calculated from National Household Survey 2015"
-            }
-        },
-        "etr_Food": {
-            "type": "float",
-            "desc": "Effective Tax Rate on Food Consumption",
-            "form": {
-                "2015": "Calculated by the Model"
-            }
-        },
-        "etr_Non_Food": {
-            "type": "float",
-            "desc": "Effective Tax Rate on Consumption on Other Items = Non_Food",
-            "form": {
-                "2015": "Calculated by the Model"
-            }
-        },
-        "etr_Other": {
-            "type": "float",
-            "desc": "Effective Tax Rate on Consumption on Other Items = Non_Food",
-            "form": {
-                "2015": "Calculated by the Model"
-            }
-        },
-        "etr_Food_curr_law": {
-            "type": "float",
-            "desc": "Effective Tax Rate on Food Consumption",
-            "form": {
-                "2015": "Calculated by the Model"
-            }
-        },
-        "etr_Non_Food_curr_law": {
-            "type": "float",
-            "desc": "Effective Tax Rate on Consumption on Other Items = Non_Food",
-            "form": {
-                "2015": "Calculated by the Model"
             }
         },
         "vat_Food": {
@@ -268,7 +226,7 @@
         },
         "vatax": {
             "type": "float",
-            "desc": "VAT",
+            "desc": "Total VAT",
             "form": {
                 "2015": "Calculated by the Model"
             }

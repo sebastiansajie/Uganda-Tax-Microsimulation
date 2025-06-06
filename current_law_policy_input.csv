@@ -1,29 +1,29 @@
 ﻿field_name,long_name,description,itr_ref,notes,row_var,row_label,start_year,cpi_inflatable,cpi_inflated,col_var,col_label,boolean_value,integer_value,value,range,min,max,out_of_range_minmsg,out_of_range_maxmsg,out_of_range_action
-_rate_Food,VAT Rate for Consumption of Food,VAT Rate for Consumption of Food,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0,,0,1,,,stop
-_rate_Alcohol_Tobacco,VAT Rate for Consumption of Alcohol_Tobacco,VAT Rate for Consumption of Alcohol_Tobacco,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Clothing_Footwear,VAT Rate for Consumption of Clothing_Footwear,VAT Rate for Consumption of Clothing_Footwear,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Housing,VAT Rate for Consumption of Housing,VAT Rate for Consumption of Housing,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Household_Goods_Services,VAT Rate for Consumption of Household_Goods_Services,VAT Rate for Consumption of Household_Goods_Services,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Health,VAT Rate for Consumption of Health,VAT Rate for Consumption of Health,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0,,0,1,,,stop
-_rate_Transport,VAT Rate for Consumption of Transport,VAT Rate for Consumption of Transport,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Communication,VAT Rate for Consumption of Communication,VAT Rate for Consumption of Communication,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Recreation_Culture,VAT Rate for Consumption of Recreation_Culture,VAT Rate for Consumption of Recreation_Culture,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Education,VAT Rate for Consumption of Education,VAT Rate for Consumption of Education,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Restaurants_Hotels,VAT Rate for Consumption of Restaurants_Hotels,VAT Rate for Consumption of Restaurants_Hotels,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Miscellaneous,VAT Rate for Consumption of Other_Consumption,VAT Rate for Consumption of Other_Consumption,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Food_curr_law,VAT Rate for Consumption of Food,VAT Rate for Consumption of Food,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0,,0,1,,,stop
-_rate_Alcohol_Tobacco_curr_law,VAT Rate for Consumption of Alcohol_Tobacco,VAT Rate for Consumption of Alcohol_Tobacco,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Clothing_Footwear_curr_law,VAT Rate for Consumption of Clothing_Footwear,VAT Rate for Consumption of Clothing_Footwear,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Housing_curr_law,VAT Rate for Consumption of Housing,VAT Rate for Consumption of Housing,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Household_Goods_Services_curr_law,VAT Rate for Consumption of Household_Goods_Services,VAT Rate for Consumption of Household_Goods_Services,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Health_curr_law,VAT Rate for Consumption of Health,VAT Rate for Consumption of Health,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0,,0,1,,,stop
-_rate_Transport_curr_law,VAT Rate for Consumption of Transport,VAT Rate for Consumption of Transport,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Communication_curr_law,VAT Rate for Consumption of Communication,VAT Rate for Consumption of Communication,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Recreation_Culture_curr_law,VAT Rate for Consumption of Recreation_Culture,VAT Rate for Consumption of Recreation_Culture,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Education_curr_law,VAT Rate for Consumption of Education,VAT Rate for Consumption of Education,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Restaurants_Hotels_curr_law,VAT Rate for Consumption of Restaurants_Hotels,VAT Rate for Consumption of Restaurants_Hotels,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_rate_Miscellaneous_curr_law,VAT Rate for Consumption of Other_Consumption,VAT Rate for Consumption of Other_Consumption,VAT Act,,AYEAR,2015,2015,false,false,,,false,false,0.14,,0,1,,,stop
-_elasticity_consumption_food_threshold,Elasticity of Food Consumption Threshholds,Elasticity of Food Consumption Threshholds,Research on Elasticity of Consumption,,AYEAR,2015,2015,false,false,bracket,,false,false,,,0,9.00E+99,,,stop
-_elasticity_consumption_food_value,Elasticity of Food Consumption Values,Elasticity of Food Consumption Values,Research on Elasticity of Consumption,,AYEAR,2015,2015,false,false,bracket,,false,false,,,-100,100,,,stop
-_elasticity_consumption_non_food_threshold,Elasticity of Non Food Consumption Threshholds,Elasticity of Non Food Consumption Threshholds,Research on Elasticity of Consumption,,AYEAR,2015,2015,false,false,bracket,,false,false,,,0,9.00E+99,,,stop
-_elasticity_consumption_non_food_value,Elasticity of Non Food Consumption Values,Elasticity of Non Food Consumption Values,Research on Elasticity of Consumption,,AYEAR,2015,2015,false,false,bracket,,false,false,,,-100,100,,,stop
+_rate_Food,VAT Rate for Consumption of Food,VAT Rate for Consumption of Food,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0,,0,1,,,stop
+_rate_Alcohol_Tobacco,VAT Rate for Consumption of Alcohol_Tobacco,VAT Rate for Consumption of Alcohol_Tobacco,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Clothing_Footwear,VAT Rate for Consumption of Clothing_Footwear,VAT Rate for Consumption of Clothing_Footwear,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Housing,VAT Rate for Consumption of Housing,VAT Rate for Consumption of Housing,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Hhold_Goods_Services,VAT Rate for Consumption of Household_Goods_Services,VAT Rate for Consumption of Household_Goods_Services,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Health,VAT Rate for Consumption of Health,VAT Rate for Consumption of Health,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0,,0,1,,,stop
+_rate_Transport,VAT Rate for Consumption of Transport,VAT Rate for Consumption of Transport,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Communication,VAT Rate for Consumption of Communication,VAT Rate for Consumption of Communication,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Recreation_Culture,VAT Rate for Consumption of Recreation_Culture,VAT Rate for Consumption of Recreation_Culture,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Education,VAT Rate for Consumption of Education,VAT Rate for Consumption of Education,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Restaurants_Hotels,VAT Rate for Consumption of Restaurants_Hotels,VAT Rate for Consumption of Restaurants_Hotels,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Miscellaneous,VAT Rate for Consumption of Other_Consumption,VAT Rate for Consumption of Other_Consumption,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Food_curr_law,VAT Rate for Consumption of Food,VAT Rate for Consumption of Food,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0,,0,1,,,stop
+_rate_Alcohol_Tobacco_curr_law,VAT Rate for Consumption of Alcohol_Tobacco,VAT Rate for Consumption of Alcohol_Tobacco,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Clothing_Footwear_curr_law,VAT Rate for Consumption of Clothing_Footwear,VAT Rate for Consumption of Clothing_Footwear,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Housing_curr_law,VAT Rate for Consumption of Housing,VAT Rate for Consumption of Housing,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Household_Goods_Services_curr_law,VAT Rate for Consumption of Household_Goods_Services,VAT Rate for Consumption of Household_Goods_Services,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Health_curr_law,VAT Rate for Consumption of Health,VAT Rate for Consumption of Health,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0,,0,1,,,stop
+_rate_Transport_curr_law,VAT Rate for Consumption of Transport,VAT Rate for Consumption of Transport,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Communication_curr_law,VAT Rate for Consumption of Communication,VAT Rate for Consumption of Communication,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Recreation_Culture_curr_law,VAT Rate for Consumption of Recreation_Culture,VAT Rate for Consumption of Recreation_Culture,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Education_curr_law,VAT Rate for Consumption of Education,VAT Rate for Consumption of Education,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Restaurants_Hotels_curr_law,VAT Rate for Consumption of Restaurants_Hotels,VAT Rate for Consumption of Restaurants_Hotels,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_rate_Miscellaneous_curr_law,VAT Rate for Consumption of Other_Consumption,VAT Rate for Consumption of Other_Consumption,VAT Act,,AYEAR,2015,2015,FALSE,FALSE,,,FALSE,FALSE,0.14,,0,1,,,stop
+_elasticity_consumption_food_threshold,Elasticity of Food Consumption Threshholds,Elasticity of Food Consumption Threshholds,Research on Elasticity of Consumption,,AYEAR,2015,2015,FALSE,FALSE,bracket,,FALSE,FALSE,,,0,9.00E+99,,,stop
+_elasticity_consumption_food_value,Elasticity of Food Consumption Values,Elasticity of Food Consumption Values,Research on Elasticity of Consumption,,AYEAR,2015,2015,FALSE,FALSE,bracket,,FALSE,FALSE,,,-100,100,,,stop
+_elasticity_consumption_non_food_threshold,Elasticity of Non Food Consumption Threshholds,Elasticity of Non Food Consumption Threshholds,Research on Elasticity of Consumption,,AYEAR,2015,2015,FALSE,FALSE,bracket,,FALSE,FALSE,,,0,9.00E+99,,,stop
+_elasticity_consumption_non_food_value,Elasticity of Non Food Consumption Values,Elasticity of Non Food Consumption Values,Research on Elasticity of Consumption,,AYEAR,2015,2015,FALSE,FALSE,bracket,,FALSE,FALSE,,,-100,100,,,stop
