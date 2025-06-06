@@ -417,7 +417,7 @@ class Calculator(object):
         # GST calculations
         if self.gstrecords is not None:
             for i in range(len(self.vat_function_names)):
-                #print('function name ', self.vat_function_names[str(i)])
+                print('function name ', self.vat_function_names[str(i)])
                 func_name = globals()[self.vat_function_names[str(i)]]
                 #print(function_names[str(i)])
                 func_name(self.__policy, self.__gstrecords)

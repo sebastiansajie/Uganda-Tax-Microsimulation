@@ -34,13 +34,9 @@
   "cit_display_distribution_table_bydecile": 0,
   "cit_display_revenue_table": 1,
   "vat_display_distribution_table_byincome": 0,
-  "vat_display_distribution_table_bydecile": 1,
+  "vat_display_distribution_table_bydecile": 0,
   "vat_display_revenue_table": 1,
-  "kakwani_list": [
-    0.7000374468902137,
-    -0.7000374468902137,
-    -0.7000374468902137
-  ],
+  "kakwani_list": [],
   "start_year": "2024",
   "end_year": "2030",
   "data_start_year": 2015,
@@ -64,12 +60,7 @@
   "vat_id_var": "id_n",
   "charts_ready": 1,
   "chart_list": [
-    "vat_revenue_projection",
-    "vat_distribution_table",
-    "vat_distribution_table_top1",
-    "vat_distribution_table_income_bins",
-    "vat_etr",
-    "vat_lorenz_curve"
+    "vat_revenue_projection"
   ],
   "show_error_log": 0,
   "verbose": 0,
@@ -80,14 +71,14 @@
   "attribute_vars": [],
   "pit_adjust_behavior": 0,
   "cit_adjust_behavior": 0,
-  "vat_adjust_behavior": 0,
+  "vat_adjust_behavior": 1,
   "pit_distribution_table": 0,
   "pit_display_distribution_table": 0,
   "pit_display_distribution_table_by_attribute": 0,
   "cit_distribution_table": 0,
   "cit_display_distribution_table": 0,
   "cit_display_distribution_table_by_attribute": 0,
-  "vat_distribution_table": 1,
+  "vat_distribution_table": 0,
   "vat_display_distribution_table": 0,
   "vat_display_distribution_table_by_attribute": 0
 }
