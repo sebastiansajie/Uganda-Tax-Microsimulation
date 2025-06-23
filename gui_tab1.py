@@ -128,14 +128,14 @@ def initialize_vars(self):
     """
     self.vars['DEFAULTS_FILENAME'] = "current_law_policy_cit_training.json"    
     self.vars['GROWFACTORS_FILENAME'] = "growfactors_cit_training.csv"
-    self.vars['cit_data_filename'] = "cit_data_training.csv"
-    self.vars['cit_weights_filename'] = "cit_weights_training.csv"
+    self.vars['cit_data_filename'] = "cit_data_training_ug.csv"
+    self.vars['cit_weights_filename'] = "cit_weights_training_ug.csv"
     self.vars['cit_records_variables_filename'] = "records_variables_cit_training.json"    
-    self.vars['cit_benchmark_filename'] = "tax_incentives_benchmark_cit.json"
+    self.vars['cit_benchmark_filename'] = "tax_incentives_benchmark_cit_ug.json"
     self.vars['cit_elasticity_filename'] = "elasticity_cit_training.json"
     self.vars['cit_functions_filename'] = "functions_cit_training.py"
     self.vars['cit_function_names_filename'] = "function_names_cit_training.json"
-    self.vars['cit_distribution_json_filename'] = 'cit_distribution_egypt.json'
+    self.vars['cit_distribution_json_filename'] = 'cit_distribution.json'
     
     self.vars['cit_max_lag_years'] = 10
 
@@ -193,7 +193,7 @@ def initialize_vars(self):
     
     self.vars['start_year'] = 2024
     self.vars['end_year']=2030
-    self.vars['data_start_year'] = 2015
+    self.vars['data_start_year'] = 2023
 
     df= pd.read_csv(self.vars['gdp_filename'])
     df = df.set_index('Year')
@@ -324,8 +324,8 @@ def display_entry(self, widget, tax_type):
             #self.vars['GROWFACTORS_FILENAME'] = "growfactors_egypt.csv"
             self.vars['DEFAULTS_FILENAME'] = "current_law_policy_cit_training.json"    
             self.vars['GROWFACTORS_FILENAME'] = "growfactors_cit_training.csv"
-            self.vars['start_year'] = 2022
-            self.vars['data_start_year'] = 2022
+            self.vars['start_year'] = 2023
+            self.vars['data_start_year'] = 2023
             self.vars['SALARY_VARIABLE'] = "SALARY"
             self.vars['cit_id_var'] = 'Taxpayer_ID'
         elif tax_type == 'vat':
@@ -497,8 +497,8 @@ def tab1(self):
     #self.status['pit'] = tk.NORMAL
     self.status['pit'] = tk.DISABLED
     #self.status['cit'] = tk.NORMAL
-    self.status['cit'] = tk.DISABLED
-    self.status['vat'] = tk.NORMAL
+    self.status['cit'] = tk.NORMAL
+    self.status['vat'] = tk.DISABLED
     #self.status['vat'] = tk.DISABLED
     
     self.block_1_title_pos_x = 0.15

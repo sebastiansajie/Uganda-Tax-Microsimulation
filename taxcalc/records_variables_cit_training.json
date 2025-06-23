@@ -158,6 +158,15 @@
       "cross_year": "No",
       "attribute": "No"
     },
+    "sch2_wdv_beg_year_class_20": {
+      "type": "float",
+      "desc": "Opening WDV of 20% asset class",
+      "form": {
+        "2020": "carried forward from Table 411B  - Tax Return Legal Persons"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
     "Add_Bld": {
       "type": "float",
       "desc": "Additions to Buildings",
@@ -203,6 +212,15 @@
       "cross_year": "No",
       "attribute": "No"
     },
+    "sch2_addinit_during_yr_class_20": {
+      "type": "float",
+      "desc": "Additions to Class 20%",
+      "form": {
+        "2020": "carried forward from Table 411B - Tax Return Legal Persons"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
     "Excl_Bld": {
       "type": "float",
       "desc": "Exclusions from Buildings",
@@ -248,6 +266,15 @@
       "cross_year": "No",
       "attribute": "No"
     },
+    "sch2_dispsl_class_20": {
+      "type": "float",
+      "desc": "Exclusions from 20% class",
+      "form": {
+        "2020": "carried forward from Table 411B - Tax Return Legal Persons"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
     "Other_deductions": {
       "type": "float",
       "desc": "Deductions from total taxable profits other than tax depreciation",
@@ -398,7 +425,7 @@
       "form": {
         "2020": "Sum of items 201 to 215 - Tax Return Legal Persons"
       }
-    },
+    },    
     "Total_taxable_profit": {
       "type": "float",
       "desc": "Taxable Income after adding back non-allowable expenses to accounting profit",
@@ -460,13 +487,6 @@
       "desc": "Taxable Income after allowing for behavioral effect",
       "form": {
         "2020": ""
-      }
-    },
-    "Net_tax_base_Egyp_Pounds": {
-      "type": "float",
-      "desc": "Net tax base in Egyptian Pounds if tax is in foreign currency based on exchange rate",
-      "form": {
-        "2020": "Item 315 - Tax Return Legal Persons"
       }
     },
     "citax": {
@@ -587,7 +607,14 @@
       "form": {
         "2020": "Sch 411B - Tax Return Legal Persons"
       }
-    },
+    }, 
+    "Tax_depr_class_20": {
+      "type": "float",
+      "desc": "Tax depreciation - 20% class",
+      "form": {
+        "2020": "Sch 411B - Tax Return Legal Persons"
+      }
+    },    
     "Cl_WDV_Bld": {
       "type": "float",
       "desc": "Closing WDV of Buildings asset class",
@@ -623,6 +650,13 @@
         "2020": "carried forward from Table 411B  - Tax Return Legal Persons"
       }
     },
+    "Cl_WDV_Class_20": {
+      "type": "float",
+      "desc": "Closing WDV of 20% asset class",
+      "form": {
+        "2020": "carried forward from Table 411B  - Tax Return Legal Persons"
+      }
+    },    
      "MAT": {
        "type": "float",
        "desc": "Minimum Alternative Tax",
