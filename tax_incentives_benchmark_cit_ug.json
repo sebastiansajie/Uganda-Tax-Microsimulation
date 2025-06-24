@@ -1,6 +1,13 @@
 {
     "policy": {
     "_rate_init_allow_mach": {"2023": [0.0]},
-    "_rate_init_allow_bld": {"2023": [0.0]}   
+    "_rate_init_allow_bld": {"2023": [0.0]},
+    "_tax_holiday_agriculture": {"2023": [0.0]},    
+    "_tax_holiday_manufacturing": {"2023": [0.0]},
+    "_tax_holiday_education": {"2023": [0.0]},    
+    "_tax_holiday_ICT": {"2023": [0.0]},
+    "_tax_holiday_Bujagali": {"2023": [0.0]},
+    "_tax_holiday_SACO_FIN": {"2023": [0.0]},
+    "_tax_holiday_other": {"2023": [0.0]} 
     }
 }

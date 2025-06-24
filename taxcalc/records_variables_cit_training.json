@@ -20,6 +20,16 @@
       "cross_year": "No",
       "attribute": "No"
     },
+    "Taxpayer_Type_Code": {
+      "required": true,
+      "type": "int",
+      "desc": "Whether Company (=1) or Otherwise(=0)",
+      "form": {
+        "2020": "private info"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },    
     "Tax_due": {
       "required": false,
       "type": "float",
@@ -409,7 +419,79 @@
       },
       "cross_year": "No",
       "attribute": "No"
-    }
+    },
+    "Tax_Holiday_Agriculture": {
+      "type": "float",
+      "desc": "Brought forward loss - ten years old",
+      "form": {
+        "2020": "Sch 412 - Tax Return Legal Persons"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "Tax_Holiday_Manufacturing": {
+      "type": "float",
+      "desc": "Brought forward loss - ten years old",
+      "form": {
+        "2020": "Sch 412 - Tax Return Legal Persons"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "Tax_Holiday_Education": {
+      "type": "float",
+      "desc": "Brought forward loss - ten years old",
+      "form": {
+        "2020": "Sch 412 - Tax Return Legal Persons"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },
+    "Tax_Holiday_ICT": {
+      "type": "float",
+      "desc": "Brought forward loss - ten years old",
+      "form": {
+        "2020": "Sch 412 - Tax Return Legal Persons"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },  
+    "Tax_Holiday_Bujagali": {
+      "type": "float",
+      "desc": "Brought forward loss - ten years old",
+      "form": {
+        "2020": "Sch 412 - Tax Return Legal Persons"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    }, 
+    "Tax_Holiday_SACO_FIN": {
+      "type": "float",
+      "desc": "Brought forward loss - ten years old",
+      "form": {
+        "2020": "Sch 412 - Tax Return Legal Persons"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },   
+    "Tax_Holiday_Other": {
+      "type": "float",
+      "desc": "Brought forward loss - ten years old",
+      "form": {
+        "2020": "Sch 412 - Tax Return Legal Persons"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    },                    
+    "Chargeable_Income_Return": {
+      "type": "float",
+      "desc": "Chargeable Income as shown in Tax Return",
+      "form": {
+        "2020": "Sch 412 - Tax Return Legal Persons"
+      },
+      "cross_year": "No",
+      "attribute": "No"
+    }    
   },
   "calc": {
     "Net_accounting_profit": {
@@ -426,7 +508,7 @@
         "2020": "Sum of items 201 to 215 - Tax Return Legal Persons"
       }
     },    
-    "Total_taxable_profit": {
+    "Gross_taxable_profit": {
       "type": "float",
       "desc": "Taxable Income after adding back non-allowable expenses to accounting profit",
       "form": {
@@ -656,12 +738,26 @@
       "form": {
         "2020": "carried forward from Table 411B  - Tax Return Legal Persons"
       }
-    },    
+    },
+     "MAT_book": {
+       "type": "float",
+       "desc": "Minimum Alternative Tax on Book Profits",
+       "form": {
+         "2020": " "
+          }
+        },
+     "MAT_turnover": {
+       "type": "float",
+       "desc": "Minimum Alternative Tax on Turnover",
+       "form": {
+         "2020": " "
+          }
+        },    
      "MAT": {
        "type": "float",
        "desc": "Minimum Alternative Tax",
        "form": {
-         "2020": "carried forward from Table 411B  - Tax Return Legal Persons"
+         "2020": " "
           }
         }          
   }
