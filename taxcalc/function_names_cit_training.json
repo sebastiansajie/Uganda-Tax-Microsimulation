@@ -15,6 +15,7 @@
   "13": "Carried_forward_losses",
   "14": "Tax_base_CF_losses",
   "15": "Net_tax_base_behavior",  
-  "16": "mat_liability",
-  "17": "cit_liability"
+  "16": "mat_liability_book",
+  "17": "mat_liability_turnover",
+  "18": "cit_liability"
 }

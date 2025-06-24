@@ -29,12 +29,12 @@ def Total_additions_to_profits(Total_additions_to_GP):
 
 @iterate_jit(nopython=True)
 def Total_taxable_profit(Net_accounting_profit, Total_additions_to_GP, 
-                         Total_taxable_profit):
+                         Gross_taxable_profit):
     """
     Compute total taxable profits afer adding back non-allowable deductions.
     """
-    Total_taxable_profit = Net_accounting_profit + Total_additions_to_GP
-    return Total_taxable_profit
+    Gross_taxable_profit = Net_accounting_profit + Total_additions_to_GP
+    return Gross_taxable_profit
 
 @iterate_jit(nopython=True)
 def Op_WDV_depr(Op_WDV_Bld, Op_WDV_Mach, Op_WDV_Others, sch2_wdv_beg_year_class_20, Op_WDV_Comp):
@@ -117,19 +117,41 @@ def Cl_WDV_depr(Op_WDV_Bld, Add_Bld, Excl_Bld, Tax_depr_Bld,
     return (Cl_WDV_Bld, Cl_WDV_Class_20, Cl_WDV_Mach, Cl_WDV_Others, Cl_WDV_Comp)
 
 @iterate_jit(nopython=True)
-def Total_deductions(Tax_depr, Other_deductions, Investment_incentive, Total_deductions):
+def Total_deductions(tax_holiday_agriculture, tax_holiday_manufacturing, 
+                     tax_holiday_education, tax_holiday_ICT, tax_holiday_Bujagali,
+                     tax_holiday_SACO_FIN, tax_holiday_other, 
+                     Tax_Holiday_Agriculture, Tax_Holiday_Manufacturing, 
+                     Tax_Holiday_Education, Tax_Holiday_ICT, Tax_Holiday_Bujagali,
+                     Tax_Holiday_SACO_FIN, Tax_Holiday_Other,
+                     Tax_depr, Other_deductions, Investment_incentive, Total_deductions):
     """
     Compute net taxable profits afer allowing deductions.
     """
-    Total_deductions = Tax_depr + Other_deductions + Investment_incentive
+
+    if (tax_holiday_agriculture==1)&(Tax_Holiday_Agriculture==1):
+        incentive_claimed = max(Investment_incentive,0)
+    if (tax_holiday_manufacturing==1)&(Tax_Holiday_Manufacturing==1):
+        incentive_claimed = max(Investment_incentive,0)
+    if (tax_holiday_education==1)&(Tax_Holiday_Education==1):
+        incentive_claimed = max(Investment_incentive,0)
+    if (tax_holiday_ICT==1)&(Tax_Holiday_ICT==1):
+        incentive_claimed = max(Investment_incentive,0)
+    if (tax_holiday_Bujagali==1)&(Tax_Holiday_Bujagali==1):
+        incentive_claimed = max(Investment_incentive,0)
+    if (tax_holiday_SACO_FIN==1)&(Tax_Holiday_SACO_FIN==1):
+        incentive_claimed = max(Investment_incentive,0)
+    if (tax_holiday_other==1)&(Tax_Holiday_Other==1):
+        incentive_claimed = max(Investment_incentive,0)
+              
+    Total_deductions = Tax_depr + max(Other_deductions,0) + incentive_claimed
     return Total_deductions
 
 @iterate_jit(nopython=True)
-def Net_taxable_profit(Total_taxable_profit, Total_deductions, Net_taxable_profit):
+def Net_taxable_profit(Gross_taxable_profit, Total_deductions, Net_taxable_profit):
     """
     Compute net taxable profits afer allowing deductions.
     """
-    Net_taxable_profit = Total_taxable_profit - Total_deductions
+    Net_taxable_profit = Gross_taxable_profit - Total_deductions
     #print(Net_taxable_profit)
     return Net_taxable_profit
 
@@ -220,30 +242,57 @@ DEBUG = False
 DEBUG_IDX = 0
 
 @iterate_jit(nopython=True)
-def mat_liability(mat_rate, Net_accounting_profit, MAT):
+def mat_liability_book(mat_rate_book_profit, Net_accounting_profit, MAT_book):
     """
-    Compute tax liability given the corporate rate
+    Compute the minimum tax liability given the turnover
     """
     # subtract TI_special_rates from TTI to get Aggregate_Income, which is
     # the portion of TTI that is taxed at normal rates
-    MAT = mat_rate*Net_accounting_profit
-        
-    return MAT
+    MAT_book = mat_rate_book_profit*Net_accounting_profit       
+    return MAT_book
 
 @iterate_jit(nopython=True)
-def cit_liability(cit_rate_genbus, Net_tax_base_behavior, MAT, citax):
+def mat_liability_turnover(mat_rate_turnover, Revenues, 
+                           Other_revenues, MAT_turnover):
+    """
+    Compute the minimum tax liability given the turnover
+    """
+    # subtract TI_special_rates from TTI to get Aggregate_Income, which is
+    # the portion of TTI that is taxed at normal rates
+    Total_Turnover = Revenues+Other_revenues
+    MAT_turnover = mat_rate_turnover*Total_Turnover       
+    return MAT_turnover
+
+@iterate_jit(nopython=True)
+def cit_liability(cit_rate_genbus, turnover_tax_threshold, turnover_tax_rate, 
+                  mat_applied_on_book_profit, 
+                  MAT_book, MAT_turnover, Taxpayer_Type_Code, Revenues, 
+                  Other_revenues, Net_tax_base_behavior, Chargeable_Income_Return,
+                  MAT, citax):
     """
     Compute tax liability given the corporate rate
     """
     # subtract TI_special_rates from TTI to get Aggregate_Income, which is
     # the portion of TTI that is taxed at normal rates
     taxinc = max(Net_tax_base_behavior, 0)
-
-    citax = cit_rate_genbus * taxinc
+    if (taxinc == 0) & (Chargeable_Income_Return > 0):
+        taxinc=Chargeable_Income_Return
+    #taxinc=Chargeable_Income_Return
+    Total_Turnover = Revenues+Other_revenues
+    if (Taxpayer_Type_Code == 1):
+        if (Total_Turnover >= turnover_tax_threshold):
+            citax = cit_rate_genbus * taxinc
+        else:
+            citax = turnover_tax_rate*Total_Turnover  
+        if (mat_applied_on_book_profit==1):
+            MAT = MAT_book
+        else:
+            MAT = MAT_turnover
         
-    if MAT>citax:
-        citax=MAT
-        
+        if MAT>citax:
+            citax=MAT
+    else:
+        citax=0    
     return citax
 
 

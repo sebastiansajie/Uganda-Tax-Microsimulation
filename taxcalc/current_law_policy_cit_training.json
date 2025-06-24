@@ -1,6 +1,6 @@
 {
-    "_mat_rate": {
-        "long_name": "Minimum Alternative Tax Rate",
+    "_mat_rate_turnover": {
+        "long_name": "Minimum Alternative Tax Rate on Turnover",
         "description": "Minimum Alternative Tax rate",
         "itr_ref": "Tax Law",
         "notes": "",
@@ -23,7 +23,57 @@
         "out_of_range_minmsg": "",
         "out_of_range_maxmsg": "",
         "out_of_range_action": "stop"
-    },    
+    },
+    "_mat_rate_book_profit": {
+        "long_name": "Minimum Alternative Tax Rate on Accounting Profit",
+        "description": "Minimum Alternative Tax rate",
+        "itr_ref": "Tax Law",
+        "notes": "",
+        "row_var": "Year",
+        "row_label": [
+            "2020"
+        ],
+        "start_year": 2020,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Value",
+        "col_label": ["Value"],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [0.0],
+        "range": {
+            "min": 0.0,
+            "max": 1.0
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_mat_applied_on_book_profit": {
+        "long_name": "MAT applied of Turnover is the default",
+        "description": "mat_on_turnover = 1 means apply it on Book Profits",
+        "itr_ref": "Tax Law",
+        "notes": "",
+        "row_var": "Year",
+        "row_label": [
+            "2020"
+        ],
+        "start_year": 2020,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Value",
+        "col_label": ["Value"],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [0.0],
+        "range": {
+            "min": 0.0,
+            "max": 1.0
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },        
     "_cit_rate_genbus": {
         "long_name": "rate at which corporates in General Business sector are taxed",
         "description": "Corporate Tax rate",
@@ -73,10 +123,10 @@
         "out_of_range_minmsg": "",
         "out_of_range_maxmsg": "",
         "out_of_range_action": "stop"
-    }, 
-    "_Donations_NGO_rate": {
-        "long_name": "Deduction rate for donations to NGO",
-        "description": "as % of Net taxable profits",
+    },     
+    "_turnover_tax_threshold": {
+        "long_name": "Turnover Tax Threshold",
+        "description": "Turnover Tax Threshold",
         "itr_ref": "Tax Law",
         "notes": "",
         "row_var": "Year",
@@ -90,18 +140,18 @@
         "col_label": ["Value"],
         "boolean_value": false,
         "integer_value": false,
-        "value": [0.09091],
+        "value": [150000000],
         "range": {
             "min": 0.0,
-            "max": 1.0
+            "max": 9e99
         },
         "out_of_range_minmsg": "",
         "out_of_range_maxmsg": "",
         "out_of_range_action": "stop"
     },
-    "_Donations_Others_rate": {
-        "long_name": "Deduction rate for donations to Others",
-        "description": "as % of Total taxable profits",
+    "_turnover_tax_rate": {
+        "long_name": "Turnover Tax Rate",
+        "description": "Turnover Tax Rate",
         "itr_ref": "Tax Law",
         "notes": "",
         "row_var": "Year",
@@ -115,7 +165,7 @@
         "col_label": ["Value"],
         "boolean_value": false,
         "integer_value": false,
-        "value": [0.0],
+        "value": [0.015],
         "range": {
             "min": 0.0,
             "max": 1.0
@@ -123,32 +173,7 @@
         "out_of_range_minmsg": "",
         "out_of_range_maxmsg": "",
         "out_of_range_action": "stop"
-    },
-    "_Donations_Govt_rate": {
-        "long_name": "Deduction rate for donations to Govt",
-        "description": "as % of Donations to Govt",
-        "itr_ref": "Tax Law",
-        "notes": "",
-        "row_var": "Year",
-        "row_label": [
-             "2020"
-        ],
-        "start_year": 2020,
-        "cpi_inflatable": false,
-        "cpi_inflated": false,
-        "col_var": "Value",
-        "col_label": ["Value"],
-        "boolean_value": false,
-        "integer_value": false,
-        "value": [1.0],
-        "range": {
-            "min": 0.0,
-            "max": 1.0
-        },
-        "out_of_range_minmsg": "",
-        "out_of_range_maxmsg": "",
-        "out_of_range_action": "stop"
-    },
+    },    
     "_Loss_CFLimit": {
         "long_name": "Loss carryforward limit (years)",
         "description": "Number of years for loss carryforward",
@@ -546,7 +571,182 @@
         "out_of_range_minmsg": "",
         "out_of_range_maxmsg": "",
         "out_of_range_action": "stop"
-    },           
+    },
+    "_tax_holiday_agriculture": {
+        "long_name": "Tax Holiday for Agr0 Processing",
+        "description": "Tax Holiday for Agricultural Processing",
+        "itr_ref": "Depreciation rate",
+        "notes": "",
+        "row_var": "Year",
+        "row_label": [
+            "2020"
+        ],
+        "start_year": 2020,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Value",
+        "col_label": ["Value"],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [1.0],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_tax_holiday_manufacturing": {
+        "long_name": "Tax Holiday for Manufacturing",
+        "description": "Tax Holiday for Manufacturing",
+        "itr_ref": "Depreciation rate",
+        "notes": "",
+        "row_var": "Year",
+        "row_label": [
+            "2020"
+        ],
+        "start_year": 2020,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Value",
+        "col_label": ["Value"],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [1.0],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },   
+    "_tax_holiday_education": {
+        "long_name": "Tax Holiday for Manufacturing",
+        "description": "Tax Holiday for Manufacturing",
+        "itr_ref": "Depreciation rate",
+        "notes": "",
+        "row_var": "Year",
+        "row_label": [
+            "2020"
+        ],
+        "start_year": 2020,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Value",
+        "col_label": ["Value"],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [1.0],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_tax_holiday_ICT": {
+        "long_name": "Tax Holiday for Manufacturing",
+        "description": "Tax Holiday for Manufacturing",
+        "itr_ref": "Depreciation rate",
+        "notes": "",
+        "row_var": "Year",
+        "row_label": [
+            "2020"
+        ],
+        "start_year": 2020,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Value",
+        "col_label": ["Value"],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [1.0],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_tax_holiday_Bujagali": {
+        "long_name": "Tax Holiday for Manufacturing",
+        "description": "Tax Holiday for Manufacturing",
+        "itr_ref": "Depreciation rate",
+        "notes": "",
+        "row_var": "Year",
+        "row_label": [
+            "2020"
+        ],
+        "start_year": 2020,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Value",
+        "col_label": ["Value"],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [1.0],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_tax_holiday_SACO_FIN": {
+        "long_name": "Tax Holiday for Manufacturing",
+        "description": "Tax Holiday for Manufacturing",
+        "itr_ref": "Depreciation rate",
+        "notes": "",
+        "row_var": "Year",
+        "row_label": [
+            "2020"
+        ],
+        "start_year": 2020,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Value",
+        "col_label": ["Value"],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [1.0],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_tax_holiday_other": {
+        "long_name": "Tax Holiday for Manufacturing",
+        "description": "Tax Holiday for Manufacturing",
+        "itr_ref": "Depreciation rate",
+        "notes": "",
+        "row_var": "Year",
+        "row_label": [
+            "2020"
+        ],
+        "start_year": 2020,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Value",
+        "col_label": ["Value"],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [1.0],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },                                  
     "_elasticity_cit_taxable_income_value": {
         "long_name": "Elasticity of Taxable Income",
         "description": "elasticity",
