@@ -1,0 +1,859 @@
+{
+    "_rate1": {  
+        "long_name": "PIT tax rate 1", 
+        "description": "The lowest tax rate, applied to the portion of taxable income below tax bracket 2.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",    
+        "row_label": [  
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.0
+        ],
+        "range": {
+            "min": 0,
+            "max": 1 
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+       
+    },
+    "_tbrk1": {
+        "long_name": "PIT tax bracket 1 (upper threshold)",
+        "description": "Taxable income below this threshold is taxed at tax rate 1.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+               2820000
+        ],
+        "range": {
+            "min": 0.01,
+            "max": "_tbrk2"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "for _tbrk2",
+        "out_of_range_action": "stop"
+    },
+    "_rate2": {  
+        "long_name": "PIT tax rate 2", 
+        "description": "The second lowest tax rate, applied to the portion of taxable income below tax bracket 3 and above tax bracket 2.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",    
+        "row_label": [  
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.10
+        ],
+        "range": {
+            "min": 0,
+            "max": 1 
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_tbrk2": {
+        "long_name": "PIT tax bracket 1 (upper threshold)",
+        "description": "Taxable income below this threshold is taxed at tax rate 1.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+               4020000
+        ],
+        "range": {
+            "min": "_tbrk1",
+            "max": "_tbrk3"
+        },
+        "out_of_range_minmsg": "for _tbrk1",
+        "out_of_range_maxmsg": "for _tbrk3",
+        "out_of_range_action": "stop"
+        
+    },
+    "_rate3": {
+        "long_name": "PIT tax rate 3", 
+        "description": "The third tax rate, applied to the portion of taxable income below tax bracket 4.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",    
+        "row_label": [  
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.20
+        ],
+        "range": {
+            "min": 0,
+            "max": 1 
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+        
+    },
+    "_tbrk3": {
+        "long_name": "PIT tax bracket 3 (upper threshold)",
+        "description": "Taxable income below this threshold and above bracket 2 is taxed at tax rate 3.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+               4920000
+        ],
+        "range": {
+            "min": "_tbrk2",
+            "max": "_tbrk4"
+        },
+        "out_of_range_minmsg": "for _tbrk2",
+        "out_of_range_maxmsg": "for _tbrk4",
+        "out_of_range_action": "stop"
+        
+    },
+    "_rate4": {
+        "long_name": "PIT tax rate 4",
+        "description": "The fourth lowest tax rate, applied to the portion of taxable income below tax bracket 5 and above tax bracket 3.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.30
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+        
+    },
+    "_tbrk4": {
+        "long_name": "PIT tax bracket 4 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 3 is taxed at tax rate 4.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                120000000
+        ],
+        "range": {
+            "min": "_tbrk3",
+            "max": "_tbrk5"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_rate5": {
+        "long_name": "PIT tax rate 5",
+        "description": "The fifth lowest tax rate, applied to the portion of taxable income below bracket 5 and above tax bracket 4.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.40
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+        
+    },
+    "_tbrk5": {
+        "long_name": "PIT tax bracket 5 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 4 is taxed at tax rate 5.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                1e99
+        ],
+        "range": {
+            "min": "_tbrk4",
+            "max": "_tbrk6"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_rate6": {
+        "long_name": "PIT tax rate 6",
+        "description": "The sixth tax rate, applied to the portion of taxable income below tax bracket 7 and above tax bracket 5.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.40
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+        
+    },
+    "_tbrk6": {
+        "long_name": "PIT tax bracket 6 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 5 is taxed at tax rate 6.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                2e99
+        ],
+        "range": {
+            "min": "_tbrk5",
+            "max": "_tbrk7"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_rate7": {
+        "long_name": "PIT tax rate 7",
+        "description": "The seventh tax rate, applied to the portion of taxable income below tax bracket 8 and above tax bracket 6.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            0.40
+        ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    
+    },
+    "_tbrk7": {
+        "long_name": "PIT tax bracket 7 (upper threshold)",
+        "description": "Income below this threshold and above tax bracket 6 is taxed at tax rate 7.",
+        "itr_ref": "R code",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": true,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": [
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+                9e99
+        ],
+        "range": {
+            "min": "_tbrk6",
+            "max": "_tbrk8"
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_housing_allowance_exempted": {
+        "long_name": "HOUSING_ALLOWANCE_EXEMPTED",
+        "description": "HOUSING_ALLOWANCE_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            0
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_transport_allowance_exempted": {
+        "long_name": "TRANSPORT_ALLOWANCE_EXEMPTED",
+        "description": "TRANSPORT_ALLOWANCE_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            0
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_medical_allowance_exempted": {
+        "long_name": "MEDICAL_ALLOWANCE_EXEMPTED",
+        "description": "MEDICAL_ALLOWANCE_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            0
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_leave_allowance_exempted": {
+        "long_name": "LEAVE_ALLOWANCE_EXEMPTED",
+        "description": "LEAVE_ALLOWANCE_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            0
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_over_time_allowance_exempted": {
+        "long_name": "OVER_TIME_ALLOWANCE_EXEMPTED",
+        "description": "OVER_TIME_ALLOWANCE_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            0
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_other_taxable_allowance_exempted": {
+        "long_name": "OTHER_TAXABLE_ALLOWANCE_EXEMPTED",
+        "description": "OTHER_TAXABLE_ALLOWANCE_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            0
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_housing_fringe_exempted": {
+        "long_name": "HOUSING_FRINGE_EXEMPTED",
+        "description": "HOUSING_FRINGE_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            0
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_motor_vehicle_allowance_exempted": {
+        "long_name": "MOTOR_VEHICLE_ALLOWANCE_EXEMPTED",
+        "description": "MOTOR_VEHICLE_ALLOWANCE_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            0
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_domestic_servants_allowance_exempted": {
+        "long_name": "DOMESTIC_SERVANTS_ALLOWANCE_EXEMPTED",
+        "description": "DOMESTIC_SERVANTS_ALLOWANCE_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            0
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_other_taxable_fringe_benefits_exempted": {
+        "long_name": "OTHER_TAXABLE_FRINGE_BENEFITS_EXEMPTED",
+        "description": "OTHER_TAXABLE_FRINGE_BENEFITS_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            0
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_standard_deduction": {
+        "long_name": "OTHER_TAXABLE_FRINGE_BENEFITS_EXEMPTED",
+        "description": "OTHER_TAXABLE_FRINGE_BENEFITS_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            0
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 9e99
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_deductions_allowed": {
+        "long_name": "OTHER_TAXABLE_FRINGE_BENEFITS_EXEMPTED",
+        "description": "OTHER_TAXABLE_FRINGE_BENEFITS_EXEMPTED",
+        "itr_ref": "Income Tax Act",
+        "notes": "",
+        "row_var": "AYEAR",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "",
+        "col_label": "",
+        "value": [
+            1
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "range": {
+            "min": 0,
+            "max": 9e99
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },              
+    "_elasticity_pit_taxable_income_threshold": {
+        "long_name": "Threshold for Elasticity of Taxable Income",
+        "description": "elasticity",
+        "itr_ref": "elasticity",
+        "notes": "",
+        "row_var": "Tax_year",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "bracket",
+        "col_label": [
+            "bracket1",
+            "bracket2",
+            "bracket3"
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            [
+                100000,
+                1000000,
+                9e99
+            ]
+      ],
+        "range": {
+            "min": 0,
+            "max": 9e99
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_elasticity_pit_taxable_income_value": {
+        "long_name": "Elasticity of Taxable Income",
+        "description": "elasticity",
+        "itr_ref": "elasticity",
+        "notes": "",
+        "row_var": "Tax_year",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Profit",
+        "col_label": [
+            "bracket1",
+            "bracket2",
+            "bracket3"
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            [
+                0.0,
+                0.0,
+                0.0
+                ]
+      ],
+        "range": {
+            "min": 0,
+            "max": 1
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_elasticity_pit_capital_income_threshold": {
+        "long_name": "Threshold for Elasticity of Capital Income",
+        "description": "elasticity",
+        "itr_ref": "elasticity",
+        "notes": "",
+        "row_var": "Tax_year",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "bracket",
+        "col_label": [
+            "bracket1",
+            "bracket2",
+            "bracket3"
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            [
+                100000,
+                1000000,
+                9e99
+            ]
+      ],
+        "range": {
+            "min": 0,
+            "max": 9e99
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    },
+    "_elasticity_pit_capital_income_value": {
+        "long_name": "Elasticity of Capital Income",
+        "description": "elasticity",
+        "itr_ref": "elasticity",
+        "notes": "",
+        "row_var": "Tax_year",
+        "row_label": [
+            "2023"
+        ],
+        "start_year": 2023,
+        "cpi_inflatable": false,
+        "cpi_inflated": false,
+        "col_var": "Profit",
+        "col_label": [
+            "bracket1",
+            "bracket2",
+            "bracket3"
+        ],
+        "boolean_value": false,
+        "integer_value": false,
+        "value": [
+            [
+                0.0,
+                0.0,
+                0.0
+                ]
+      ],
+        "range": {
+            "min": 0,
+            "max": 9e99
+        },
+        "out_of_range_minmsg": "",
+        "out_of_range_maxmsg": "",
+        "out_of_range_action": "stop"
+    }             
+}

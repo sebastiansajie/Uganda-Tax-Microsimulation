@@ -1,0 +1,224 @@
+{
+    "read": {
+        "id_n": {
+            "required": true,
+            "type": "int",
+            "desc": "Unique positive numeric identifier for filing unit",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "Year": {
+            "required": true,
+            "type": "int",
+            "desc": "Year",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "weight": {
+            "required": true,
+            "type": "float",
+            "desc": "Weight",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_basic_salary": {
+            "required": false,
+            "type": "float",
+            "desc": "Basic Salary",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_housing_allowance": {
+            "required": false,
+            "type": "float",
+            "desc": "Housing Allowance",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_transport": {
+            "required": false,
+            "type": "float",
+            "desc": "Transport Allowance",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_medical": {
+            "required": false,
+            "type": "float",
+            "desc": "Medical Allowance",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_leave": {
+            "required": false,
+            "type": "float",
+            "desc": "Leave Allowance",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_over_time": {
+            "required": false,
+            "type": "float",
+            "desc": "Overtime Earnings",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_other_taxable_allow": {
+            "required": false,
+            "type": "float",
+            "desc": "Other Allowances",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_housing": {
+            "required": false,
+            "type": "float",
+            "desc": "Housing Fringe",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_motor_vehicle": {
+            "required": false,
+            "type": "float",
+            "desc": "Motor Vehicle Fringe",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_domestic_servants": {
+            "required": false,
+            "type": "float",
+            "desc": "Domestic Servants Fringe",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_other_taxable_benf": {
+            "required": false,
+            "type": "float",
+            "desc": "Other Fringe Benefits",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_gross_income": {
+            "required": false,
+            "type": "float",
+            "desc": "Gross Income",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_allowable_deductions": {
+            "required": false,
+            "type": "float",
+            "desc": "Allowable Deductions",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_total_taxable_income": {
+            "required": false,
+            "type": "float",
+            "desc": "Taxable Income",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_tax_on_total_income": {
+            "required": false,
+            "type": "float",
+            "desc": "Tax Payable",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "No",
+            "attribute": "No"
+        },
+        "sch1_paye_deducted": {
+            "required": false,
+            "type": "float",
+            "desc": "PAYE Deducted",
+            "form": {
+                "2023": "PAYE Return"
+            },
+            "cross_year": "nan",
+            "attribute": "nan"
+        }
+    },
+    "calc": {
+        "gross_income": {
+            "type": "float",
+            "desc": "Gross Income Calculated",
+            "form": {
+                "2023": "Calculated by the Model"
+            }
+        },
+        "GTI": {
+            "type": "float",
+            "desc": "Gross Income Calculated",
+            "form": {
+                "2023": "Calculated by the Model"
+            }
+        },        
+        "taxable_income": {
+            "type": "float",
+            "desc": "Taxable Income Calculated",
+            "form": {
+                "2023": "Calculated by the Model"
+            }
+        },
+        "pitax": {
+            "type": "float",
+            "desc": "Total Personal Income Tax",
+            "form": {
+                "2023": "Calculated by the Model"
+            }
+        }
+    }
+}
