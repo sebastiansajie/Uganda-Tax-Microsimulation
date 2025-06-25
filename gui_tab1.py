@@ -104,17 +104,19 @@ def initialize_vars(self):
     # self.vars['gdp_filename'] = 'gdp_nominal_srilanka.csv'
     
     
-    self.vars['DEFAULTS_FILENAME'] = "current_law_policy_pit_Mex.json"
-    self.vars['GROWFACTORS_FILENAME'] = "growfactors_pit_Mex.csv" 
-    self.vars['pit_data_filename'] = "pit_mexico_big.csv"
-    self.vars['pit_weights_filename'] = "pit_mexico_big_weights.csv"
-    self.vars['pit_records_variables_filename'] = "records_variables_pit_Mex.json"
-    self.vars['pit_benchmark_filename'] = "tax_incentives_benchmark_pit_mexico.json"
+    self.vars['DEFAULTS_FILENAME'] = "current_law_policy_pit_ug.json"
+    self.vars['GROWFACTORS_FILENAME'] = "growfactors_pit_ug.csv" 
+    #self.vars['pit_data_filename'] = "pit_sample_ug.csv"
+    self.vars['pit_data_filename'] = "pit_sample_small_ug.csv"    
+    #self.vars['pit_weights_filename'] = "pit_sample_weights_ug.csv"
+    self.vars['pit_weights_filename'] = "pit_sample_small_weights_ug.csv"    
+    self.vars['pit_records_variables_filename'] = "records_variables_pit_ug.json"
+    self.vars['pit_benchmark_filename'] = "tax_incentives_benchmark_pit_ug.json"
     self.vars['pit_elasticity_filename'] = "pit_elasticity_selection.json"
-    self.vars['pit_functions_filename'] = "functions_pit_Mex.py"
-    self.vars['pit_function_names_filename'] = "function_names_pit_Mex.json"
-    self.vars['pit_distribution_json_filename'] = 'pit_distribution_training.json'
-    self.vars['gdp_filename'] = 'gdp_nominal_pit_Mex.csv'
+    self.vars['pit_functions_filename'] = "functions_pit_ug.py"
+    self.vars['pit_function_names_filename'] = "function_names_pit_ug.json"
+    self.vars['pit_distribution_json_filename'] = 'pit_distribution_ug.json'
+
     
     """
     self.vars['cit_data_filename'] = "cit_egypt.csv"
@@ -149,7 +151,7 @@ def initialize_vars(self):
     self.vars['vat_functions_filename'] = "functions_vat_botswana.py"
     self.vars['vat_function_names_filename'] = "function_names_vat_botswana.json"
     self.vars['vat_distribution_json_filename'] = "vat_distribution_botswana.json"   
-    self.vars['gdp_filename'] = 'gdp_nominal_training.csv'
+    #self.vars['gdp_filename'] = 'gdp_nominal_training.csv'
     
     """
     self.vars['DEFAULTS_FILENAME'] = "current_law_policy_vat_Indonesia.json"
@@ -195,6 +197,8 @@ def initialize_vars(self):
     self.vars['end_year']=2030
     self.vars['data_start_year'] = 2023
 
+    self.vars['gdp_filename'] = 'gdp_nominal_ug.csv'
+    
     df= pd.read_csv(self.vars['gdp_filename'])
     df = df.set_index('Year')
     GDP_dict = df.to_dict()
@@ -312,10 +316,10 @@ def display_entry(self, widget, tax_type):
         self.entry_end_year[tax_type].destroy()
     else:
         if tax_type == 'pit':
-            self.vars['DEFAULTS_FILENAME'] = "current_law_policy_pit_Mex.json"
-            self.vars['GROWFACTORS_FILENAME'] = "growfactors_pit_Mex.csv"
-            self.vars['start_year'] = 2022
-            self.vars['data_start_year'] = 2022
+            self.vars['DEFAULTS_FILENAME'] = "current_law_policy_pit_ug.json"
+            self.vars['GROWFACTORS_FILENAME'] = "growfactors_pit_ug.csv"
+            self.vars['start_year'] = 2023
+            self.vars['data_start_year'] = 2023
             #self.vars['SALARY_VARIABLE'] = "EmpIncRemuneration"
             self.vars['SALARY_VARIABLE'] = "SALARY"
             self.vars['pit_id_var'] = 'id_n'          
@@ -494,12 +498,12 @@ def tab1(self):
     self.vars['cit'] = 0
     self.vars['vat'] = 0
     
-    #self.status['pit'] = tk.NORMAL
-    self.status['pit'] = tk.DISABLED
-    #self.status['cit'] = tk.NORMAL
+    self.status['pit'] = tk.NORMAL
+    #self.status['pit'] = tk.DISABLED
     self.status['cit'] = tk.NORMAL
+    #self.status['cit'] = tk.DISABLED
+    #self.status['vat'] = tk.NORMAL
     self.status['vat'] = tk.DISABLED
-    #self.status['vat'] = tk.DISABLED
     
     self.block_1_title_pos_x = 0.15
     self.block_1_title_box_y = 0.15

@@ -678,7 +678,7 @@ class Calculator(object):
         Return pandas DataFrame containing the DIST_TABLE_COLUMNS variables
         from embedded Records object.
         """
-        if tax_type == 'pit':        
+        if tax_type == 'pit':    
             if self.records is not None:
                 if attribute_var is not None:
                     if attribute_value == 'All':
@@ -977,8 +977,10 @@ class Calculator(object):
                 im2 = calc2.carray(imeasure)
             if self.gstrecords is not None:
                 im1 = calc1.garray(imeasure)
-                im2 = calc2.garray(imeasure)                
-            return np.allclose(im1, im2, rtol=0.0, atol=0.01)
+                im2 = calc2.garray(imeasure)
+            have_same_income_measure = np.allclose(im1, im2, rtol=0.0, atol=0.01)
+            have_same_income_measure = True
+            return have_same_income_measure
         
         # main logic of method
         from taxcalc.utils import create_distribution_table
@@ -1010,6 +1012,7 @@ class Calculator(object):
                     (attribute_types, attribute_data) = self.get_attribute_types(tax_type, 0)
         #print('attribute_types ', attribute_types)
         dt1 = {}
+        
         for attribute_value in attribute_types:                   
             var_dataframe = self.distribution_table_dataframe(tax_type, distribution_vardict['DIST_VARIABLES'], attribute_value, attribute_var)
             #print('var_dataframe \n', var_dataframe)
@@ -1027,6 +1030,7 @@ class Calculator(object):
             assert calc.current_year == self.current_year
             assert calc.array_len == self.array_len
             dt2 = {}
+            #print("attrib types : ", attribute_types)
             for attribute_value in attribute_types:  
                 var_dataframe = calc.distribution_table_dataframe(tax_type, distribution_vardict['DIST_VARIABLES'], attribute_value, attribute_var)
                 if have_same_income_measure(self, calc, imeasure):

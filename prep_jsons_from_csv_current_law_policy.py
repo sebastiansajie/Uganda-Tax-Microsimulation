@@ -13,7 +13,7 @@ def checknan(value):
         value=""
     return value
     
-df = pd.read_csv("current_law_policy_input.csv")
+df = pd.read_csv("current_law_policy_input_pit.csv")
 final_json = {}
 cols = list(df.columns)
 for idx, row in df.iterrows():
@@ -53,7 +53,7 @@ for idx, row in df.iterrows():
     item['out_of_range_action'] = str(row['out_of_range_action'])
     final_json[field_name]=item
 
-with open('taxcalc/current_law_policy_vat_botswana.json', 'w') as f:
+with open('taxcalc/current_law_policy_pit_partial.json', 'w') as f:
     json.dump(final_json, f, indent=4)
     
 print(f"JSON successfully written {final_json}")

@@ -204,16 +204,16 @@ def generate_policy_revenues():
     years, reform=read_reform_dict(block_selected_dict)
     pol2.implement_reform(reform['policy'])
     calc2 = Calculator(policy=pol2, records=recs, corprecords=crecs, gstrecords=grecs, verbose=verbose)
-
+    #print("I am here")
     # dump out records
-    dump_vars = ['id_n', 'Year', 'CONS_Food', 'CONS_Non_Food', 'etr_Food',
-                 'etr_Non_Food', 'vat_Food', 'vat_Non_Food', 'vatax']
-    dumpdf = calc1.dataframe(dump_vars)
-    column_order = dumpdf.columns
+    # dump_vars = ['id_n', 'Year', 'CONS_Food', 'CONS_Non_Food', 'etr_Food',
+    #              'etr_Non_Food', 'vat_Food', 'vat_Non_Food', 'vatax']
+    # dumpdf = calc1.dataframe(dump_vars)
+    # column_order = dumpdf.columns
     
-    dumpdf.to_csv('app1-dump_vat.csv', columns=column_order,
-                  index=False, float_format='%.0f')
-
+    # dumpdf.to_csv('app1-dump_vat.csv', columns=column_order,
+    #               index=False, float_format='%.0f')
+    #print("finished I am here")
     #tax_collection_var = tax_collection_var_list[0]
     id_var = id_varlist[0]
 
