@@ -213,6 +213,13 @@
                 "2023": "Calculated by the Model"
             }
         },
+        "taxable_income_behavior": {
+            "type": "float",
+            "desc": "Taxable Income Calculated",
+            "form": {
+                "2023": "Calculated by the Model"
+            }
+        },        
         "pitax": {
             "type": "float",
             "desc": "Total Personal Income Tax",
